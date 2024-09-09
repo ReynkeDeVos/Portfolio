@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-scrollbar {
+}
+
+.writing-vertical {
+  writing-mode: vertical-lr;
+}
+
+html {
+  scroll-behavior: smooth;
+}
