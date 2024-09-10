@@ -14,48 +14,21 @@ export const Experience = () => {
 
 const experience = [
   {
-    title: "Google",
-    position: "Software Engineer",
-    time: "2022 - Present",
-    location: "Atlanta",
+    title: "WBS Coding School",
+    position: "Full-Stack Web Development Bootcamp",
+    time: "March 2024 - July 2024",
+    location: "Berlin, Germany (Remote)",
     description:
-      "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-    tech: [
-      "Angular",
-      "Python",
-      "GCP",
-      "Git",
-      "GitHub",
-      "Java",
-      "Golang",
-      "K8s",
-    ],
+      "Learned full-stack development using the MERN stack, with a focus on building responsive and user-friendly applications. Developed projects such as a fitness tracker and a tech news search platform, utilizing React, Tailwind CSS, Node.js, and MongoDB.",
+    tech: ["React", "Tailwind CSS", "shadcn/ui", "Node.js", "MongoDB", "JWT", "API Integration"],
   },
   {
-    title: "Facebook",
-    position: "Software Engineer",
-    time: "2020 - 2022",
-    location: "San Francisco",
+    title: "Leibniz-Institut für Virologie (LIV)",
+    position: "Biological Technical Assistant",
+    time: "April 2014 - September 2023",
+    location: "Hamburg, Germany",
     description:
-      "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-    tech: ["React", "Node", "PHP", "GraphQL", "Presto", "Cassandra"],
-  },
-  {
-    title: "Amazon",
-    position: "Software Engineer",
-    time: "2016 - 2020",
-    location: "Seattle",
-    description:
-      "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
-    tech: [
-      "Java",
-      "Python",
-      "S3",
-      "RDS",
-      "Redshift",
-      "PySpark",
-      "HDFS",
-      "Apache Airflow",
-    ],
+      "Collaborated in multidisciplinary teams to conduct complex laboratory analyses. Managed laboratory operations, developed software solutions for hazardous substance management, and contributed to research published in scientific journals.",
+    tech: ["FIJI ImageJ", "Nikon NIS-Elements", "GraphPad Prism", "Python", "Project Management", "Data Analysis"],
   },
 ];

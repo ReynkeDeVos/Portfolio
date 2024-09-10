@@ -13,31 +13,31 @@ export const About = () => {
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
               <span className="bg-indigo-500 text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">H</span>
-              i! I'm Renke Brixel, a front-end developer with a focus on crafting seamless and responsive user
-              interfaces using Tailwind CSS and React. After completing a Full-Stack Web & App Development Bootcamp at
-              WBS Coding School, I’ve gained extensive experience in building user-centric applications that are both
-              functional and visually appealing.
+              i! I'm Renke Brixel, a web developer with experience in both front-end and back-end technologies. After
+              completing a Full-Stack Web & App Development Bootcamp at WBS Coding School, I’ve developed a
+              foundation in building scalable, efficient, and user-centric applications across the full stack.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              My expertise lies in front-end development, particularly with technologies like React and Tailwind CSS,
-              but I'm comfortable working across the stack when needed. I enjoy creating efficient, clean, and scalable
-              code that brings designs to life.
+              I have worked with modern front-end frameworks like React and Tailwind CSS, while also being
+              proficient in back-end technologies such as Node.js, Express, and MongoDB. Whether it's developing
+              responsive user interfaces or managing robust server-side architectures, I enjoy creating seamless digital
+              experiences from start to finish.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              When I'm not coding, you can often find me staying active with hobbies like running and hiking. These
-              activities help me maintain a clear mind and a fresh perspective, which I bring into my development work
-              to tackle complex challenges.
+              My previous career in virology taught me to approach complex problems methodically, a skill I now bring to
+              software development. I'm passionate about writing clean, maintainable code and constantly exploring new
+              technologies to stay on the cutting edge of web development.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              I'm always open to new opportunities where I can apply my skills and collaborate on innovative projects.
-              If you're looking for a passionate developer who can deliver engaging user experiences, feel free to reach
-              out!
+              Outside of coding, I’m an avid runner and hiker, which helps me stay focused and energized. I'm always on
+              the lookout for new challenges where I can apply my skills and collaborate with talented teams to build
+              innovative solutions. Let's connect and discuss how we can work together!
             </p>
           </Reveal>
           <Reveal>
