@@ -14,14 +14,15 @@ const Hero = () => {
           </Reveal>
           <Reveal>
             <h2 className="pointer-events-auto my-2 text-xl sm:text-2xl text-zinc-300 md:my-4 md:text-4xl">
-              I'm a <span className="font-semibold text-indigo-500">Full-Stack Web Developer</span>
+              I'm an <span className="font-semibold text-indigo-500">Entry-Level Web & App Developer</span>
             </h2>
           </Reveal>
           <Reveal>
             <p className="pointer-events-auto leading-relaxed md:leading-relaxed max-w-xl text-sm text-zinc-300 md:text-base">
-              With a strong foundation in building modern, responsive web applications, I’m passionate about creating
-              user-friendly interfaces that are both functional and visually appealing. Let's build something great
-              together!
+              I recently transitioned into full-stack web development after a career in virology. With a solid
+              foundation in front-end and back-end technologies, I am eager to apply my analytical mindset and
+              problem-solving skills to build responsive, user-friendly web applications. Let's collaborate and create
+              something exceptional!
             </p>
           </Reveal>
           <Reveal>
