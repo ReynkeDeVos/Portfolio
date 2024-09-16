@@ -93,6 +93,50 @@ const projects = [
     ),
   },
   {
+    title: "Pokebattle App",
+    imgSrc: "project-imgs/pokebattle.webp",
+    code: "https://github.com/EinKinddesWindes/PokemonBattle",
+    projectLink: "https://pokebattler.netlify.app/",
+    tech: ["React", "Global Context", "DaisyUI", "Tailwind CSS", "RESTful API"],
+    description:
+      "A Pokémon battle app allowing players to simulate battles. Built using React, DaisyUI, and Tailwind CSS for a dynamic frontend. This was our first time using React Context for state management, and we integrated the RESTful API from pokeapi.co for Pokémon data.",
+    modalContent: (
+      <>
+        <p>
+          Pokebattle App is a Pokémon battle simulator that gives users the ability to engage in battles between
+          Pokémon. This project was developed collaboratively with{" "}
+          <a
+            href="https://github.com/Sebastian-Weber"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-300 hover:text-indigo-400">
+            Sebastian
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://github.com/EinKinddesWindes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-300 hover:text-indigo-400">
+            Clara
+          </a>
+          .
+        </p>
+        <p>
+          The app uses <strong>React</strong> with <strong>Context API</strong> for state management, marking our first
+          time working with React Context. We built the frontend with <strong>DaisyUI</strong> and{" "}
+          <strong>Tailwind CSS</strong>, creating a responsive and visually engaging experience. Users can select their
+          Pokémon and engage in battles, with real-time updates to health and attacks.
+        </p>
+        <p>
+          The app further explored API usage, specifically integrating the <strong>RESTful API</strong> from{" "}
+          <strong>pokeapi.co</strong> to fetch Pokémon data. This project helped us deepen our knowledge of API fetching
+          and state management in React.
+        </p>
+      </>
+    ),
+  },
+  {
     title: "WBS To-Do App",
     imgSrc: "project-imgs/todo-app.jpg",
     code: "https://github.com/sharonVko/TodoList",
@@ -175,50 +219,6 @@ const projects = [
         <p>
           This project was a great opportunity to explore front-end development, but it was especially valuable for
           learning API fetching.
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "Pokebattle App",
-    imgSrc: "project-imgs/pokebattle.webp",
-    code: "https://github.com/EinKinddesWindes/PokemonBattle",
-    projectLink: "https://pokebattler.netlify.app/",
-    tech: ["React", "Global Context", "DaisyUI", "Tailwind CSS", "RESTful API"],
-    description:
-      "A Pokémon battle app allowing players to simulate battles. Built using React, DaisyUI, and Tailwind CSS for a dynamic frontend. This was our first time using React Context for state management, and we integrated the RESTful API from pokeapi.co for Pokémon data.",
-    modalContent: (
-      <>
-        <p>
-          Pokebattle App is a Pokémon battle simulator that gives users the ability to engage in battles between
-          Pokémon. This project was developed collaboratively with{" "}
-          <a
-            href="https://github.com/Sebastian-Weber"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-300 hover:text-indigo-400">
-            Sebastian
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://github.com/EinKinddesWindes"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-indigo-300 hover:text-indigo-400">
-            Clara
-          </a>
-          .
-        </p>
-        <p>
-          The app uses <strong>React</strong> with <strong>Context API</strong> for state management, marking our first
-          time working with React Context. We built the frontend with <strong>DaisyUI</strong> and{" "}
-          <strong>Tailwind CSS</strong>, creating a responsive and visually engaging experience. Users can select their
-          Pokémon and engage in battles, with real-time updates to health and attacks.
-        </p>
-        <p>
-          The app further explored API usage, specifically integrating the <strong>RESTful API</strong> from{" "}
-          <strong>pokeapi.co</strong> to fetch Pokémon data. This project helped us deepen our knowledge of API fetching
-          and state management in React.
         </p>
       </>
     ),
