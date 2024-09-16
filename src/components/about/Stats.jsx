@@ -31,6 +31,7 @@ export const Stats = () => {
             <Chip>OAuth</Chip>
 
             {/* Tools */}
+            <Chip>Arch Linux</Chip>
             <Chip>Git</Chip>
             <Chip>Figma</Chip>
             <Chip>Excalidraw</Chip>
