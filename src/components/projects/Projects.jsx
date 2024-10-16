@@ -19,7 +19,7 @@ export const Projects = () => {
 const projects = [
   {
     title: "Elder Gym Bro App",
-    imgSrc: "project-imgs/elder-gym.jpg", // replace with actual image
+    imgSrc: "project-imgs/elder-gym.jpg",
     code: "https://github.com/MichalWollny/ElderGymBroApp",
     projectLink: "https://eldergymbro.netlify.app/",
     tech: ["React", "MaterialUI (MUI)", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT"],
