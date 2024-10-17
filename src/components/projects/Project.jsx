@@ -53,6 +53,8 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
             objectFit="cover"
             objectPosition="top"
             className="absolute top-0 left-0"
+            placeholder="blur" // Enables blurred placeholder
+            blurDataURL={blurDataURL} // Sets the blurred image
           />
         </div>
         <div className="mt-6">
