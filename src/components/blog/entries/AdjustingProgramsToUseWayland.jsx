@@ -154,11 +154,7 @@ const AdjustingProgramsToUseWayland = () => {
       <CodeBlockWithCopy code={`--enable-features=TouchpadOverscrollHistoryNavigation`} />
       <p className="mb-2">Enables touchpad navigation (note: conflicts with VA-API).</p>
       <p className="mb-4">
-        Enable “Overlay Scrollbars” by visiting{" "}
-        <a href="chrome://flags/" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:underline">
-          chrome://flags/
-        </a>{" "}
-        for a visually sleeker scrollbar experience.
+        Enable “Overlay Scrollbars” by visiting chrome://flags/ for a visually sleeker scrollbar experience.
       </p>
 
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">2. Firefox</h3>
