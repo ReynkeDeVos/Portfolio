@@ -32,7 +32,9 @@ const Blog = () => {
   return (
     <div className="relative">
       {/* Side Navigation */}
-      <SideNavigation blogEntries={filteredEntries} onNavigate={handleNavigate} />
+      <div className="hidden lg:block">
+        <SideNavigation blogEntries={filteredEntries} onNavigate={handleNavigate} />
+      </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8 max-w-5xl text-zinc-100">

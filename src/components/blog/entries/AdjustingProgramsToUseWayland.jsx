@@ -11,12 +11,12 @@ const CodeBlockWithCopy = ({ code }) => {
   };
 
   return (
-    <div className="relative flex items-start mb-2">
+    <div className="relative flex items-center mb-2">
       <pre className="bg-zinc-800 text-blue-400 p-2 rounded overflow-x-auto flex-grow touch-pan-x">
         <code>{code}</code>
       </pre>
       <button
-        className="ml-2 text-white p-1 mt-2"
+        className="ml-2 text-white p-1"
         onClick={copyToClipboard}
         onMouseEnter={() => setTooltipVisible(true)}
         onMouseLeave={() => setTooltipVisible(false)}>
