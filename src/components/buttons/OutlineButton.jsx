@@ -1,4 +1,3 @@
-import React from "react";
 import { twMerge } from "tailwind-merge";
 
 export const OutlineButton = ({ children, className, ...rest }) => {
@@ -22,8 +21,7 @@ export const OutlineButton = ({ children, className, ...rest }) => {
         active:scale-95`,
         className
       )}
-      {...rest}
-    >
+      {...rest}>
       {children}
     </button>
   );
