@@ -11,9 +11,13 @@
 │   ├── favicon.ico
 │   └── project-imgs
 │       ├── elder-gym.jpg
+│       ├── elder-gym_tiny.avif.avif
 │       ├── hackz0rs-news.jpg
+│       ├── hackz0rs-news_tiny.avif
 │       ├── pokebattle.webp
-│       └── todo-app.jpg
+│       ├── poke_tiny.avif
+│       ├── todo-app.jpg
+│       └── todo-app_tiny.avif
 ├── README.md
 ├── src
 │   ├── components
@@ -36,4 +40,4 @@
 │       └── globals.css
 └── tailwind.config.js
 
-16 directories, 21 files
+16 directories, 25 files
