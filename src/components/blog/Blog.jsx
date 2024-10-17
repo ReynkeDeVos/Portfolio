@@ -9,7 +9,7 @@ const tags = ["Tech", "Linux", "Frontend", "TypeScript", "React", "Next.js", "Ta
 
 const blogEntries = [
   {
-    title: "Adjusting Programs to Use Wayland Instead of XWayland",
+    title: "Fractional Scaling, GNOME and XWayland",
     date: "2024-10-17",
     component: <AdjustingProgramsToUseWayland />,
     tags: ["Tech", "Linux", "Frontend"],
@@ -80,7 +80,7 @@ const Blog = () => {
           {filteredEntries.length > 0 ? (
             filteredEntries.map((entry) => (
               <div key={entry.id} ref={(el) => (postRefs.current[entry.id] = el)} className="mb-6" id={entry.id}>
-                <h2 className="text-2xl font-semibold text-blue-500">{entry.title}</h2>
+                <h2 className="text-4xl font-semibold text-blue-500">{entry.title}</h2>
                 <p className="text-gray-500">{entry.date}</p>
                 <div className="mt-4">{entry.component}</div>
               </div>
