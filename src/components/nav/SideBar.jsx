@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { SideBarLink } from "./SideBarLink";
+import Link from "next/link";
 
 const MotionNav = motion.create("nav");
 
@@ -47,6 +48,9 @@ export const SideBar = () => {
       </SideBarLink>
       <SideBarLink selected={selected} setSelected={setSelected} value="contact" href="#contact">
         Contact
+      </SideBarLink>
+      <SideBarLink href="/blog" value="blog" selected={selected} setSelected={setSelected}>
+        Blog
       </SideBarLink>
     </MotionNav>
   );

@@ -27,5 +27,8 @@ export const MyLinks = () => (
       rel="nofollow">
       <SiGithub />
     </Link>
+    <Link className="text-zinc-300 hover:text-indigo-300 transition-colors" href="/blog">
+      Blog
+    </Link>
   </div>
 );
