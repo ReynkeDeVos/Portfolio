@@ -9,8 +9,8 @@ const AdjustingProgramsToUseWayland = () => {
     <div className="text-zinc-300 relative mx-auto">
       <h2 className="text-2xl font-bold mt-8 mb-2">Introduction</h2>
       <p className="mb-2">
-        Okay, picture this: you're sitting there, feeling like a tech wizard with your Arch Linux setup, running GNOME
-        with fractional scaling enabled. You’ve got the fancy{" "}
+        Okay, picture this: you're sitting there, feeling like a tech wizard with your Arch setup, running GNOME with
+        fractional scaling enabled. You’ve got the fancy{" "}
         <span
           className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono relative cursor-pointer"
           onClick={() => setIsOpen(true)}>
