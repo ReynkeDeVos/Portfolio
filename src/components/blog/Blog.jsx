@@ -2,6 +2,7 @@ import Link from "next/link";
 import AdjustingProgramsToUseWayland from "./entries/AdjustingProgramsToUseWayland";
 import { useState, useRef } from "react";
 import SideNavigation from "./SideNavigation";
+import BlogBanner from "./BlogBanner";
 
 // More tags for categorization, styled to match the portfolio style
 const tags = ["Tech", "Linux", "Frontend", "TypeScript", "React", "Next.js", "Tailwind", "Backend"];
@@ -47,10 +48,11 @@ const Blog = () => {
           </Link>
         </div>
 
-        <h1 className="text-4xl font-black mb-8 text-blue-500">Renke's Blog</h1>
+        {/* Banner */}
+        <BlogBanner />
 
         {/* Tag filters */}
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap gap-2 mb-6 mt-4">
           {tags.map((tag) => {
             const isSelected = selectedTag === tag;
 

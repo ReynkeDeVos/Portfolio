@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { SideBarLink } from "./SideBarLink";
-import Link from "next/link";
 
 const MotionNav = motion.create("nav");
 
