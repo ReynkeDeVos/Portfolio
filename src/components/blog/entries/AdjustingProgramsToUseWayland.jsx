@@ -1,96 +1,6 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { FiClipboard } from "react-icons/fi";
 import { useState } from "react";
-
-// CodeBlockWithCopy component
-const CodeBlockWithCopy = ({ code }) => {
-  const [tooltipVisible, setTooltipVisible] = useState(false);
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(code);
-  };
-
-  return (
-    <div className="relative flex items-center mb-2">
-      <pre className="bg-zinc-800 text-blue-400 p-2 rounded overflow-x-auto flex-grow touch-pan-x">
-        <code>{code}</code>
-      </pre>
-      <button
-        className="ml-2 text-white p-1"
-        onClick={copyToClipboard}
-        onMouseEnter={() => setTooltipVisible(true)}
-        onMouseLeave={() => setTooltipVisible(false)}>
-        <FiClipboard size={18} />
-      </button>
-      {tooltipVisible && (
-        <div className="absolute right-10 top-1/2 transform -translate-y-1/2 bg-zinc-700 text-white text-xs p-1 rounded">
-          Copy to clipboard
-        </div>
-      )}
-    </div>
-  );
-};
-
-const SpringModal = ({ isOpen, setIsOpen }) => {
-  const [tooltipVisible, setTooltipVisible] = useState(false);
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(
-      `gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffer", "xwayland-native-scaling"]'`
-    );
-  };
-
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm cursor-pointer">
-          <motion.div
-            initial={{ scale: 0.5, rotate: "12deg" }}
-            animate={{ scale: 1, rotate: "0deg" }}
-            exit={{ scale: 0.5, rotate: "0deg" }}
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
-            className="bg-zinc-800 p-4 rounded-md shadow-md relative w-full max-w-md mx-4 cursor-default">
-            <button
-              className="absolute top-2 right-2 text-white p-2 transition-all duration-300 hover:bg-zinc-700 rounded-md"
-              onClick={() => setIsOpen(false)}>
-              Close
-            </button>
-            <h2 className="text-lg font-bold text-indigo-400 mb-2">GSettings Command</h2>
-            <p className="text-zinc-100 mb-2 text-sm">
-              Use the following command to set GNOME's experimental features for better scaling:
-            </p>
-            <div className="relative flex items-start">
-              <pre className="bg-zinc-900 text-blue-400 p-2 rounded overflow-x-auto flex-grow touch-pan-x">
-                <code>
-                  gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffer",
-                  "xwayland-native-scaling"]'
-                </code>
-              </pre>
-              <button
-                className="ml-2 text-white p-1 mt-2"
-                onClick={copyToClipboard}
-                onMouseEnter={() => setTooltipVisible(true)}
-                onMouseLeave={() => setTooltipVisible(false)}>
-                <FiClipboard size={18} />
-              </button>
-              {tooltipVisible && (
-                <div className="absolute right-10 top-1/2 transform -translate-y-1/2 bg-zinc-700 text-white text-xs p-1 rounded">
-                  Copy to clipboard
-                </div>
-              )}
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
+import CodeBlockWithCopy from "../../buttons/CodeBlockWithCopy";
+import SpringModal from "../../buttons/SpringModal";
 
 const AdjustingProgramsToUseWayland = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -127,8 +37,9 @@ const AdjustingProgramsToUseWayland = () => {
         Here are the instructions for configuring popular programs to run on Wayland
       </h2>
 
+      {/* Section 1: Google Chrome/Chromium */}
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">
-        1. Google Chrome/Chromium/other Chromium based browsers
+        1. Google Chrome/Chromium/Other Chromium-Based Browsers
       </h3>
       <p className="mb-2">
         To run Google Chrome or Chromium natively on Wayland, create a{" "}
@@ -154,14 +65,17 @@ const AdjustingProgramsToUseWayland = () => {
       <CodeBlockWithCopy code={`--enable-features=TouchpadOverscrollHistoryNavigation`} />
       <p className="mb-2">Enables touchpad navigation (note: conflicts with VA-API).</p>
       <p className="mb-4">
-        Enable “Overlay Scrollbars” by visiting chrome://flags/ for a visually sleeker scrollbar experience.
+        Enable “Overlay Scrollbars” by visiting <code>chrome://flags/</code> for a visually sleeker scrollbar
+        experience.
       </p>
 
+      {/* Section 2: Firefox */}
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">2. Firefox</h3>
       <p className="mb-4">
-        Firefox works out of the box on Wayland, with VA-API support, and touchpad navigation enabled by default.
+        Firefox works out of the box on Wayland, with VA-API support and touchpad navigation enabled by default.
       </p>
 
+      {/* Section 3: Text Editors and IDEs */}
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">3. Text Editors and IDEs</h3>
       <p className="mb-2">
         <strong>Visual Studio Code:</strong> Create or modify{" "}
@@ -187,6 +101,8 @@ const AdjustingProgramsToUseWayland = () => {
         and add:
       </p>
       <CodeBlockWithCopy code={`-Dawt.toolkit.name=WLToolkit`} />
+
+      {/* Section 4: Insomnia and Signal Desktop */}
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">4. Insomnia and Signal Desktop</h3>
       <p className="mb-2">
         <strong>Insomnia:</strong> Edit the desktop file (easily done via{" "}
@@ -210,10 +126,11 @@ const AdjustingProgramsToUseWayland = () => {
           rel="noopener noreferrer"
           className="text-indigo-400 hover:underline">
           AppIndicator and KStatusNotifierItem Support
-        </a>
-        &nbsp;GNOME extension.
+        </a>{" "}
+        GNOME extension.
       </p>
 
+      {/* Section 5: MongoDB Compass */}
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">5. MongoDB Compass</h3>
       <p className="mb-2">Update the desktop file to:</p>
       <CodeBlockWithCopy
@@ -222,6 +139,7 @@ const AdjustingProgramsToUseWayland = () => {
 --ozone-platform=wayland --ignore-additional-command-line-flags %U`}
       />
 
+      {/* Section 6: Spotify */}
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">6. Spotify</h3>
       <p className="mb-2">Edit the desktop file to include:</p>
       <CodeBlockWithCopy code={`spotify --enable-features=UseOzonePlatform --ozone-platform=wayland %U`} />
@@ -237,6 +155,7 @@ const AdjustingProgramsToUseWayland = () => {
         .
       </p>
 
+      {/* Section 7: Flatpak Applications */}
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">7. Flatpak Applications</h3>
       <p className="mb-2">
         For Flatpak apps, install{" "}
@@ -251,6 +170,7 @@ const AdjustingProgramsToUseWayland = () => {
         <span className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono">socket=wayland</span>.
       </p>
 
+      {/* Conclusion */}
       <h2 className="text-2xl font-bold mt-8 mb-2">Conclusion</h2>
       <p className="mb-2">
         By configuring your applications to run on Wayland, you can significantly improve visual quality and enjoy a
