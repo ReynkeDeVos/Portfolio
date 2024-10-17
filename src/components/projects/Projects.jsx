@@ -19,7 +19,7 @@ export const Projects = () => {
 const projects = [
   {
     title: "Elder Gym Bro App",
-    imgSrc: "project-imgs/elder-gym.jpg",
+    imgSrc: "/project-imgs/elder-gym.jpg",
     code: "https://github.com/MichalWollny/ElderGymBroApp",
     projectLink: "https://eldergymbro.netlify.app/",
     tech: ["React", "MaterialUI (MUI)", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT"],
@@ -94,7 +94,7 @@ const projects = [
   },
   {
     title: "Pokebattle App",
-    imgSrc: "project-imgs/pokebattle.webp",
+    imgSrc: "/project-imgs/pokebattle.webp",
     code: "https://github.com/EinKinddesWindes/PokemonBattle",
     projectLink: "https://pokebattler.netlify.app/",
     tech: ["React", "Global Context", "DaisyUI", "Tailwind CSS", "RESTful API"],
@@ -138,7 +138,7 @@ const projects = [
   },
   {
     title: "WBS To-Do App",
-    imgSrc: "project-imgs/todo-app.jpg",
+    imgSrc: "/project-imgs/todo-app.jpg",
     code: "https://github.com/sharonVko/TodoList",
     projectLink: "https://todo-by-the-best-team-ev4r.netlify.app/",
     tech: ["React", "JavaScript", "HTML", "Tailwind CSS", "Local Storage"],
@@ -181,7 +181,7 @@ const projects = [
   },
   {
     title: "Hacker News Search",
-    imgSrc: "project-imgs/hackz0rs-news.jpg",
+    imgSrc: "/project-imgs/hackz0rs-news.jpg",
     code: "https://github.com/HannoBielz/hacker-news",
     projectLink: "https://hackz0rs-news-search.netlify.app/",
     tech: ["React", "Tailwind CSS", "Axios"],

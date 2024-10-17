@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { ProjectModal } from "./ProjectModal";
 import Reveal from "../util/Reveal";
+import Image from "next/image";
 
 const MotionDiv = motion.create("div");
 
@@ -39,20 +40,19 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
         <div
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          onClick={() => setIsOpen(true)}
-          className="w-full aspect-video bg-zinc-700 cursor-pointer relative rounded-lg overflow-hidden">
-          <img
+          className="w-full aspect-video bg-zinc-700 cursor-pointer relative rounded-lg overflow-hidden"
+          style={{
+            transform: hovered ? "scale(1.05) rotate(2deg)" : "scale(1) rotate(0deg)",
+            transition: "transform 0.3s ease",
+          }}
+          onClick={() => setIsOpen(true)}>
+          <Image
             src={imgSrc}
             alt={`An image of the ${title} project.`}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover", // Ensures the image covers the container
-              objectPosition: "top", // Aligns image content to the top
-              transform: hovered ? "scale(1.05) rotate(2deg)" : "scale(1) rotate(0deg)", // Hover effect
-              transition: "transform 0.3s ease",
-            }}
-            className="w-full h-full absolute top-0 left-0"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
+            className="absolute top-0 left-0"
           />
         </div>
         <div className="mt-6">

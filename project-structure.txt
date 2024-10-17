@@ -1,0 +1,39 @@
+.
+├── jsconfig.json
+├── netlify.toml
+├── next.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.mjs
+├── project-structure.txt
+├── public
+│   ├── CV_Renke_Brixel.pdf
+│   ├── favicon.ico
+│   └── project-imgs
+│       ├── elder-gym.jpg
+│       ├── hackz0rs-news.jpg
+│       ├── pokebattle.webp
+│       └── todo-app.jpg
+├── README.md
+├── src
+│   ├── components
+│   │   ├── about
+│   │   ├── blog
+│   │   ├── buttons
+│   │   ├── contact
+│   │   ├── experience
+│   │   ├── hero
+│   │   ├── index.jsx
+│   │   ├── nav
+│   │   ├── projects
+│   │   └── util
+│   ├── pages
+│   │   ├── _app.jsx
+│   │   ├── blog.jsx
+│   │   ├── _document.jsx
+│   │   └── index.jsx
+│   └── styles
+│       └── globals.css
+└── tailwind.config.js
+
+16 directories, 21 files

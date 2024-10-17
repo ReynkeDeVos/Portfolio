@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"   # Build command
-  publish = ".next"           # Sets the publish directory to `.next`
+  command = "next build"      # Build command
+  # Do not set 'publish' when using '@netlify/plugin-nextjs'
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"   # Making sure the Netlify plugin is used
