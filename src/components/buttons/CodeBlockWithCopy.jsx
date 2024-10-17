@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiClipboard } from "react-icons/fi";
+import { FiCopy } from "react-icons/fi";
 
 const CodeBlockWithCopy = ({ code }) => {
   const [tooltipText, setTooltipText] = useState("");
@@ -42,7 +42,7 @@ const CodeBlockWithCopy = ({ code }) => {
         onClick={copyToClipboard}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
-        <FiClipboard size={20} />
+        <FiCopy size={20} />
       </button>
       {tooltipText && (
         <div className="absolute right-12 top-1/2 transform -translate-y-1/2 bg-zinc-700 text-white text-xs py-1 px-2 rounded shadow-lg">
