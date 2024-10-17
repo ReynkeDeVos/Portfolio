@@ -181,7 +181,7 @@ const projects = [
   },
   {
     title: "Hacker News Search",
-    imgSrc: "project-imgs/hackz0rs-news.jpg", // replace with actual image
+    imgSrc: "project-imgs/hackz0rs-news.jpg",
     code: "https://github.com/HannoBielz/hacker-news",
     projectLink: "https://hackz0rs-news-search.netlify.app/",
     tech: ["React", "Tailwind CSS", "Axios"],

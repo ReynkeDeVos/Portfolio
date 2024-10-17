@@ -45,10 +45,14 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
             src={imgSrc}
             alt={`An image of the ${title} project.`}
             style={{
-              width: hovered ? "90%" : "85%",
-              rotate: hovered ? "2deg" : "0deg",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover", // Ensures the image covers the container
+              objectPosition: "top", // Aligns image content to the top
+              transform: hovered ? "scale(1.05) rotate(2deg)" : "scale(1) rotate(0deg)", // Hover effect
+              transition: "transform 0.3s ease",
             }}
-            className="w-[85%] absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 transition-all rounded"
+            className="w-full h-full absolute top-0 left-0"
           />
         </div>
         <div className="mt-6">

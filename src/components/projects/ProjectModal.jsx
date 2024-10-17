@@ -31,7 +31,7 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
         animate={{ y: 0, opacity: 1 }}
         onClick={(e) => e.stopPropagation()}
         className="w-full max-w-2xl h-fit rounded-lg overflow-hidden bg-zinc-900 shadow-lg cursor-auto">
-        <img className="w-full" src={imgSrc} alt={`An image of the ${title} project.`} />
+        <img className="w-full max-h-[40vh] object-scale-down" src={imgSrc} alt={`An image of the ${title} project.`} />
         <div className="p-8">
           <h4 className="text-3xl font-bold mb-2">{title}</h4>
           <div className="flex flex-wrap gap-2 text-sm text-indigo-300">{tech.join(" - ")}</div>
@@ -64,8 +64,7 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
     </div>
   );
 
-  if (!isOpen) return <></>;
+  if (!isOpen) return null;
 
-  // @ts-ignore
   return ReactDOM.createPortal(content, document.getElementById("root"));
 };
