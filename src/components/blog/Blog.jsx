@@ -12,7 +12,7 @@ const blogEntries = [
 
 const Blog = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 max-w-5xl">
       <h1 className="text-4xl font-bold mb-8 text-zinc-100">Renke's Blog</h1>
       <ul>
         {blogEntries.map((entry, index) => (

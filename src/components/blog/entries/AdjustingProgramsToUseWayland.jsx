@@ -4,11 +4,11 @@ const AdjustingProgramsToUseWayland = () => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className="text-zinc-300 relative">
+    <div className="text-zinc-300 relative mx-auto ">
       <h2 className="text-2xl font-bold mb-2">Introduction</h2>
       <p className="mb-4">
-        Okay, picture this: you're sitting there, feeling like a tech wizard with your Arch setup, running GNOME with
-        fractional scaling enabled. You’ve got the fancy{" "}
+        Okay, picture this: you're sitting there, feeling like a tech wizard with your Arch Linux setup, running GNOME
+        with fractional scaling enabled. You’ve got the fancy{" "}
         <span
           className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono relative cursor-pointer"
           onMouseEnter={() => setShowTooltip(true)}
@@ -31,7 +31,8 @@ const AdjustingProgramsToUseWayland = () => {
       </p>
       <p className="mb-4">
         Turns out, XWayland is the culprit—this compatibility layer just doesn’t understand the concept of making things
-        look crisp. So, naturally, I had to do what any self-respecting Arch Linux user would do: configure it myself.
+        look crisp. So, naturally, I had to do what any self-respecting Arch Linux user would do:{" "}
+        <strong>configure it!</strong>
       </p>
       <p className="mb-4">
         Adjusting the programs to run natively on Wayland and boom—sharp visuals, better hardware acceleration, and a
@@ -40,7 +41,7 @@ const AdjustingProgramsToUseWayland = () => {
       </p>
 
       <h2 className="text-2xl font-bold mb-4 text-indigo-400">
-        Here are the instructions for configuring popular programs to run on Wayland.
+        Here are the instructions for configuring popular programs to run on Wayland
       </h2>
 
       <h3 className="text-xl font-bold mb-2 text-indigo-300">
