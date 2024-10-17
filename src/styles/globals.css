@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
+  overflow: -moz-scrollbars-none;
   scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .writing-vertical {
