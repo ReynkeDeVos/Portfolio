@@ -1,7 +1,12 @@
-/** @type {import('next').NextConfig} */
+import withBundleAnalyzer from "@next/bundle-analyzer";
+
 const nextConfig = {
   reactStrictMode: true,
-  output: "standalone", // Enabled standalone mode
+  output: "standalone",
+  swcMinify: true,
+  // images: {},  // No external domains needed since images are served from the public folder
 };
 
-export default nextConfig;
+export default withBundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+})(nextConfig);
