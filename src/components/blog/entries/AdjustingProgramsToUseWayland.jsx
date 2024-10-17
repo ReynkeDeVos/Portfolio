@@ -9,7 +9,7 @@ const AdjustingProgramsToUseWayland = () => {
     <div className="text-zinc-300 relative mx-auto">
       <h2 className="text-2xl font-bold mt-8 mb-2">Introduction</h2>
       <p className="mb-2">
-        Okay, picture this: you're sitting there, feeling like a tech wizard with your Arch setup, running GNOME with
+        Okay, picture this: you're sitting there, feeling like a tech wizard 🧙‍♂️ with your Arch setup, running GNOME with
         fractional scaling enabled. You’ve got the fancy{" "}
         <span
           className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono relative cursor-pointer"
@@ -23,14 +23,14 @@ const AdjustingProgramsToUseWayland = () => {
       <p className="mb-2">
         Turns out, XWayland is the culprit—this compatibility layer just doesn’t understand the concept of making things
         look crisp. So, naturally, I had to do what any self-respecting Arch Linux user would do:{" "}
-        <strong>configure it!</strong>
+        <strong>configure it!</strong> 🛠️
       </p>
       <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <p className="mb-2">
-        Adjusting the programs to run natively on Wayland and boom—sharp visuals, better hardware acceleration, and a
+        Adjusting the programs to run natively on Wayland and boom 💥—sharp visuals, better hardware acceleration, and a
         much happier me. Below are the steps I took to make this magic happen, so you too can escape the dreaded
-        XWayland blur and join the crispy-clear side of Wayland.
+        XWayland blur and join the crispy-clear side of Wayland. 😎
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-indigo-400">
@@ -45,7 +45,8 @@ const AdjustingProgramsToUseWayland = () => {
         To run Google Chrome or Chromium natively on Wayland, create a{" "}
         <span className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono">chrome-flags.conf</span> (or{" "}
         <span className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono">chromium-flags.conf</span> for
-        Chromium) in your configuration directory and add:
+        Chromium) in your <span className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono">~/.config</span>{" "}
+        directory and add:
       </p>
       <CodeBlockWithCopy
         code={`--ozone-platform=wayland
@@ -72,7 +73,7 @@ const AdjustingProgramsToUseWayland = () => {
       {/* Section 2: Firefox */}
       <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">2. Firefox</h3>
       <p className="mb-4">
-        Firefox works out of the box on Wayland, with VA-API support and touchpad navigation enabled by default.
+        Firefox works out of the box on Wayland, with VA-API support and touchpad navigation enabled by default. 🎉
       </p>
 
       {/* Section 3: Text Editors and IDEs */}
@@ -88,7 +89,7 @@ const AdjustingProgramsToUseWayland = () => {
         automatic switching between X11 and Wayland.
       </p>
       <p className="mb-2">
-        <strong>Zed Text Editor:</strong> The Zed text editor works out of the box with Wayland.
+        <strong>Zed Text Editor:</strong> The Zed text editor works out of the box with Wayland. ⚡
       </p>
       <p className="mb-2">
         <strong>JetBrains IntelliJ IDEs:</strong> JetBrains IntelliJ IDEs are still working on proper Wayland support.
@@ -170,13 +171,20 @@ const AdjustingProgramsToUseWayland = () => {
         <span className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono">socket=wayland</span>.
       </p>
 
+      {/* Section 8: Steam */}
+      <h3 className="text-xl font-bold mt-6 mb-2 text-indigo-300">8. Steam</h3>
+      <p className="mb-2">
+        Unfortunately, Steam is not Wayland-compatible yet. 😢 You'll still have to deal with XWayland, meaning it will
+        remain blurry or won't scale properly for the time being. Let's hope Valve releases updates soon!
+      </p>
+
       {/* Conclusion */}
       <h2 className="text-2xl font-bold mt-8 mb-2">Conclusion</h2>
       <p className="mb-2">
         By configuring your applications to run on Wayland, you can significantly improve visual quality and enjoy a
-        more consistent experience, especially with fractional scaling on GNOME.
+        more consistent experience, especially with fractional scaling on GNOME. 🚀
       </p>
-      <p className="mb-8">Happy tweaking!</p>
+      <p className="mb-8">Happy tweaking! 🧑‍💻</p>
     </div>
   );
 };
