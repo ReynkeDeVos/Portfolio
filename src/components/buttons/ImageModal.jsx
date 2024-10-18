@@ -16,9 +16,9 @@ const ImageModal = ({ isOpen, setIsOpen }) => {
           <motion.div
             className="relative w-full max-w-6xl cursor-default"
             onClick={(e) => e.stopPropagation()} // Prevent modal from closing when clicking on the image itself
-            initial={{ scale: 0.5 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.5 }}
+            initial={{ scale: 0.5, rotate: '12deg' }}
+            animate={{ scale: 1, rotate: '0deg' }}
+            exit={{ scale: 0.5, rotate: '0deg' }}
             transition={{ duration: 0.3 }}>
             <Image
               src="/project-imgs/blurry-cut.avif" // The same image as used earlier
@@ -27,7 +27,6 @@ const ImageModal = ({ isOpen, setIsOpen }) => {
               height={612} // Use actual height of the image
               className="rounded-lg"
             />
-
             {/* Close button placed very close to the image */}
             <button
               className="absolute -top-12 right-2 text-xl text-zinc-300 transition-colors hover:text-indigo-300"
