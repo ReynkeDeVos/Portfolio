@@ -8,17 +8,7 @@ import Image from "next/image";
 
 const MotionDiv = motion.create("div");
 
-export const ProjectModal = ({
-  modalContent,
-  projectLink,
-  setIsOpen,
-  imgSrc,
-  isOpen,
-  title,
-  code,
-  tech,
-  blurDataURL,
-}) => {
+export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isOpen, title, code, tech }) => {
   useEffect(() => {
     const body = document.querySelector("body");
 
