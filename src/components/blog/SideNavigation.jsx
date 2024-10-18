@@ -1,9 +1,9 @@
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 const NUM_LINES = 30; // Adjust this as needed
 
-const MotionNav = motion.create("nav");
+const MotionNav = motion.create('nav');
 
 const SideNavigation = ({ blogEntries, onNavigate }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -19,7 +19,7 @@ const SideNavigation = ({ blogEntries, onNavigate }) => {
         mouseY.set(Infinity);
         setIsHovered(false);
       }}
-      className="fixed right-0 top-0 flex h-screen flex-col items-end justify-between py-4 pl-8 z-50">
+      className="fixed right-0 top-0 z-50 flex h-screen flex-col items-end justify-between py-4 pl-8">
       {Array.from(Array(NUM_LINES).keys()).map((i) => {
         const linkContent = blogEntries[i];
 

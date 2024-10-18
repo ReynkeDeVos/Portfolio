@@ -1,10 +1,10 @@
-import { SideBar } from "./nav/SideBar";
-import { Header } from "./nav/Header";
-import Hero from "./hero/Hero";
-import { About } from "./about/About";
-import { Projects } from "./projects/Projects";
-import { Experience } from "./experience/Experience";
-import { Contact } from "./contact/Contact";
+import { SideBar } from './nav/SideBar';
+import { Header } from './nav/Header';
+import Hero from './hero/Hero';
+import { About } from './about/About';
+import { Projects } from './projects/Projects';
+import { Experience } from './experience/Experience';
+import { Contact } from './contact/Contact';
 
 export const HomePage = () => {
   return (
@@ -12,7 +12,7 @@ export const HomePage = () => {
       <SideBar />
       <main>
         <Header />
-        <div className="mx-auto max-w-5xl px-4 md:px-8 space-y-32 pb-24">
+        <div className="mx-auto max-w-5xl space-y-32 px-4 pb-24 md:px-8">
           <Hero />
           <About />
           <Projects />

@@ -1,15 +1,12 @@
-import { Reveal } from "./Reveal";
+import { Reveal } from './Reveal';
 
-export const SectionHeader = ({ title, dir = "r" }) => {
+export const SectionHeader = ({ title, dir = 'r' }) => {
   return (
-    <div
-      className="flex items-center gap-8 mb-12"
-      style={{ flexDirection: dir === "r" ? "row" : "row-reverse" }}
-    >
-      <div className="w-full h-[1px] bg-zinc-700" />
+    <div className="mb-12 flex items-center gap-8" style={{ flexDirection: dir === 'r' ? 'row' : 'row-reverse' }}>
+      <div className="h-[1px] w-full bg-zinc-700" />
       <h2>
         <Reveal>
-          <span className="text-3xl md:text-5xl font-black text-end">
+          <span className="text-end text-3xl font-black md:text-5xl">
             {title}
             <span className="text-indigo-500">.</span>
           </span>

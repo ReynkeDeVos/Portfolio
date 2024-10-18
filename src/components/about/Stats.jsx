@@ -1,17 +1,17 @@
-import { Chip } from "../util/Chip";
-import Reveal from "../util/Reveal";
-import { AiFillCode, AiFillSmile } from "react-icons/ai";
+import { Chip } from '../util/Chip';
+import Reveal from '../util/Reveal';
+import { AiFillCode, AiFillSmile } from 'react-icons/ai';
 
 export const Stats = () => {
   return (
     <div className="relative">
       <Reveal>
         <div>
-          <h4 className="flex items-center mb-6">
-            <AiFillCode className="text-indigo-500 text-2xl" />
-            <span className="font-bold ml-2">Technologies I Use</span>
+          <h4 className="mb-6 flex items-center">
+            <AiFillCode className="text-2xl text-indigo-500" />
+            <span className="ml-2 font-bold">Technologies I Use</span>
           </h4>
-          <div className="flex flex-wrap gap-2 mb-12">
+          <div className="mb-12 flex flex-wrap gap-2">
             {/* Front-End */}
             <Chip>JavaScript</Chip>
             <Chip>HTML</Chip>
@@ -41,11 +41,11 @@ export const Stats = () => {
       </Reveal>
       <Reveal>
         <div>
-          <h4 className="flex items-center mb-6">
-            <AiFillSmile className="text-indigo-500 text-2xl" />
-            <span className="font-bold ml-2">Technologies I'm Exploring</span>
+          <h4 className="mb-6 flex items-center">
+            <AiFillSmile className="text-2xl text-indigo-500" />
+            <span className="ml-2 font-bold">Technologies I'm Exploring</span>
           </h4>
-          <div className="flex flex-wrap gap-2 mb-12">
+          <div className="mb-12 flex flex-wrap gap-2">
             <Chip>Next.js</Chip>
             <Chip>TypeScript</Chip>
             <Chip>Svelte</Chip>

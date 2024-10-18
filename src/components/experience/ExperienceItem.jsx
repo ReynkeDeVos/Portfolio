@@ -1,35 +1,28 @@
-import { Chip } from "../util/Chip";
-import Reveal from "../util/Reveal";
+import { Chip } from '../util/Chip';
+import Reveal from '../util/Reveal';
 
-export const ExperienceItem = ({
-  title,
-  position,
-  time,
-  location,
-  description,
-  tech,
-}) => {
+export const ExperienceItem = ({ title, position, time, location, description, tech }) => {
   return (
-    <div className="mb-6 border-b pb-6 border-zinc-700">
-      <div className="flex items-center justify-between mb-2">
+    <div className="mb-6 border-b border-zinc-700 pb-6">
+      <div className="mb-2 flex items-center justify-between">
         <Reveal>
-          <span className="font-bold text-xl">{title}</span>
+          <span className="text-xl font-bold">{title}</span>
         </Reveal>
         <Reveal>
           <span>{time}</span>
         </Reveal>
       </div>
 
-      <div className="flex items-center justify-between mb-4">
+      <div className="mb-4 flex items-center justify-between">
         <Reveal>
-          <span className="text-indigo-300 font-bold">{position}</span>
+          <span className="font-bold text-indigo-300">{position}</span>
         </Reveal>
         <Reveal>
           <span>{location}</span>
         </Reveal>
       </div>
       <Reveal>
-        <p className="mb-6 text-zinc-300 leading-relaxed">{description}</p>
+        <p className="mb-6 leading-relaxed text-zinc-300">{description}</p>
       </Reveal>
       <Reveal>
         <div className="flex flex-wrap gap-2">
