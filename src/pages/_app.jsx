@@ -1,5 +1,11 @@
 import Head from 'next/head';
 import '../styles/globals.css';
+import { Inter } from 'next/font/google';
+
+{
+  /* Preload Critical Resources */
+}
+const inter = Inter({ subsets: ['latin'] });
 
 function MyApp({ Component, pageProps }) {
   const { title, description, url, image, keywords, author } = pageProps;
@@ -27,8 +33,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:title" content={title || "Renke's WebDev Portfolio"} />
         <meta name="twitter:description" content={description || "Renke's WebDev Portfolio"} />
         <meta name="twitter:image" content={image || '/project-imgs/og-image.avif'} />
-
-        {/* Preload Critical Resources */}
 
         {/* Favicon and Theme Color */}
         <link rel="icon" href="/favicon.ico" />

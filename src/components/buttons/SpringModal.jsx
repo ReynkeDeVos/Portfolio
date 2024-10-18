@@ -27,7 +27,7 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
             </button>
             <h2 className="mb-2 text-lg font-bold text-indigo-400">GSettings Command</h2>
             <p className="mb-2 text-sm text-zinc-100">
-              Use the following command to set GNOME's experimental features for better scaling:
+              Use the following command to set GNOME&apos;s experimental features for better scaling:
             </p>
             <CodeBlockWithCopy
               code={`gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffer", "xwayland-native-scaling"]'`}

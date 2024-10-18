@@ -13,7 +13,7 @@ const BlogBanner = () => {
 
       {/* Banner Content */}
       <div className="relative z-10 px-4 text-center">
-        <h1 className="text-3xl font-extrabold text-white drop-shadow-md md:text-4xl lg:text-5xl">Renke's Blog</h1>
+        <h1 className="text-3xl font-extrabold text-white drop-shadow-md md:text-4xl lg:text-5xl">Renke&apos;s Blog</h1>
         <p className="mt-2 text-lg text-gray-200 drop-shadow-sm md:text-xl lg:text-2xl">
           Insights into Tech, Linux, WebDev, and Beyond
         </p>
