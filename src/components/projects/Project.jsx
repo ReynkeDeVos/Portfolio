@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const MotionDiv = motion.create("div");
 
-export const Project = ({ modalContent, projectLink, description, imgSrc, title, code, tech }) => {
+export const Project = ({ modalContent, projectLink, description, imgSrc, title, code, tech, blurDataURL }) => {
   const [hovered, setHovered] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
