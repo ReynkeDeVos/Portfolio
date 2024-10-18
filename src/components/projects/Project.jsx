@@ -23,16 +23,6 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
     }
   }, [isInView, controls]);
 
-  // Preload the modal images after the component mounts
-  useEffect(() => {
-    const imagesToPreload = [imgSrc];
-
-    imagesToPreload.forEach((src) => {
-      const img = new Image();
-      img.src = src;
-    });
-  }, [imgSrc]);
-
   return (
     <>
       <MotionDiv
