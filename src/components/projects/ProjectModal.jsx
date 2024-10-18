@@ -8,17 +8,7 @@ import Image from 'next/image';
 
 const MotionDiv = motion.create('div');
 
-export const ProjectModal = ({
-  modalContent,
-  projectLink,
-  setIsOpen,
-  imgSrc,
-  isOpen,
-  title,
-  code,
-  tech,
-  blurDataURL,
-}) => {
+export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isOpen, title, code, tech }) => {
   useEffect(() => {
     const body = document.querySelector('body');
 
@@ -59,8 +49,8 @@ export const ProjectModal = ({
             alt={`An image of the ${title} project.`}
             layout="fill"
             objectFit="contain" // Ensures image fits without cropping
-            placeholder="blur"
-            blurDataURL={blurDataURL}
+            // placeholder="blur"
+            // blurDataURL={blurDataURL}
             priority // Ensures high priority for the image (preloads it)
             // sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px" // Serve different sizes based on screen width
             unoptimized={imgSrc.endsWith('pokebattle.webp')}

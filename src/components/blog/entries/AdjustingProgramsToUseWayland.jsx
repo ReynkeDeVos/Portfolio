@@ -1,16 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import CodeBlockWithCopy from '../../buttons/CodeBlockWithCopy';
 import SpringModal from '../../buttons/SpringModal';
+import ImageModal from '../../buttons/ImageModal';
 
 const AdjustingProgramsToUseWayland = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [imageModalOpen, setImageModalOpen] = useState(false); // For modal
+  const [hasMounted, setHasMounted] = useState(false);
+
+  // Ensure that this code only runs on the client
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   return (
     <div className="relative mx-auto text-zinc-300">
       <h2 className="mb-2 mt-8 text-2xl font-bold">Introduction</h2>
       <p className="mb-2">
-        Okay, picture this: you&apos;re sitting there, feeling like a tech wizard 🧙‍♂️ with your Arch setup, running GNOME with
-        fractional scaling enabled with the fancy{' '}
+        Okay, picture this: you&apos;re sitting there, feeling like a tech wizard 🧙‍♂️ with your Arch setup, running GNOME
+        with fractional scaling enabled with the fancy{' '}
         <span
           className="relative cursor-pointer rounded bg-zinc-800 px-1 py-0.5 font-mono text-zinc-100"
           onClick={() => setIsOpen(true)}>
@@ -25,19 +34,39 @@ const AdjustingProgramsToUseWayland = () => {
         look crisp. So, naturally, I had to do what any self-respecting Arch Linux user would do:{' '}
         <strong>configure it!</strong> 🛠️
       </p>
-      <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
-
+      {/* Only render modal after component has mounted */}
+      {hasMounted && <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />}
       <p className="mb-2">
         Adjusting the launch settings of the programs to run natively on Wayland and boom 💥—sharp visuals, better
         hardware acceleration, and a much happier me. Below are the steps I took to make this magic happen, so you too
         can escape the dreaded XWayland blur and join the crispy-clear side of Wayland. 😎 To be fair, KDE Plasma 6 &
         GNOME 47 have made great strides in improving XWayland support, but nothing beats native Wayland.
       </p>
-
+      {/* Chromium on Wayland vs XWayland in 2019 Image with modal */}
+      <div className="my-4 flex flex-col items-center">
+        <Image
+          src="/project-imgs/blurry-cut.avif"
+          alt="Chromium on Wayland vs XWayland in 2019"
+          sizes="100vw"
+          style={{
+            width: '75%',
+            height: 'auto',
+          }}
+          width={1200} // Actual width of the image
+          height={612} // Actual height of the image
+          className="cursor-pointer rounded-lg" // Add rounded corners and cursor pointer for modal trigger
+          placeholder="blur"
+          blurDataURL="data:image/avif;base64,AAAAHGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZgAAAOptZXRhAAAAAAAAACFoZGxyAAAAAAAAAABwaWN0AAAAAAAAAAAAAAAAAAAAAA5waXRtAAAAAAABAAAAImlsb2MAAAAAREAAAQABAAAAAAEOAAEAAAAAAAABqwAAACNpaW5mAAAAAAABAAAAFWluZmUCAAAAAAEAAGF2MDEAAAAAamlwcnAAAABLaXBjbwAAABNjb2xybmNseAABAA0ABoAAAAAMYXYxQ4EADAAAAAAUaXNwZQAAAAAAAADIAAAAZgAAABBwaXhpAAAAAAMICAgAAAAXaXBtYQAAAAAAAAABAAEEAYIDBAAAAbNtZGF0EgAKCRgdsfKwQENBoTKbAxIAAooooUDbxczN7ugEmNLgA9yhUMiCU1Yg8S9VCsDEriyC+vunpmZCWv7YW/MnoJW7QEEW9rwuKO0jwPMhwJzav4yGf76qtngRHxQ7trkqJ7sZW066cPcBHqECcygoCAvSndOPJCbEPE0SOJUau4G2s+sVzAci/sPjANas+SqS3UDZU8A8ZFc4MmfbrXbxI52WQH381RNciJKzsrblr6SREmT+IU5OGCTTwM/jtHIAMtxPCM13xX/YxWESkt6jSMHZ0ds9q5Qk7lmwRptUaqP/jl+e637+17K4lvc9DDKJRsu3VafSg1vTcj4GJwa7zn4nR8aAB1eBhTI+5t+Gi45DhoKu9GkmdWAGPihUfGqM9QQ0RlzaPvqfdZguiTq/Wrz8JUwKP6f5IT/W5VRCqqqGm1TXQ1A3DCHKpeutIT6wqDC46eAVThA0CHwt73XwvwrnDc++tTSSCVKYeCjONIPP+w5R4lSCtGy08fF913HEWa3IT31j6nX219X1bHdoTZJTfJGnWQQzYW3jvIia1d+9rj7FfHqdlt+mKA==" // Base64-encoded placeholder image
+          onClick={() => setImageModalOpen(true)} // Open modal on image click
+        />
+        <span className="mt-1 block text-center text-sm text-gray-500">
+          Comparison of Chromium on Wayland (left) vs XWayland (right) in 2019.
+        </span>
+      </div>
+      <ImageModal isOpen={imageModalOpen} setIsOpen={setImageModalOpen} /> {/* Image modal for full-screen view */}
       <h2 className="mb-4 mt-8 text-2xl font-bold text-indigo-400">
         How to configure popular programs to run on Wayland
       </h2>
-
       {/* Section 1: Google Chrome/Chromium */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">
         1. Google Chrome/Chromium/Other Chromium-Based Browsers
@@ -70,13 +99,11 @@ const AdjustingProgramsToUseWayland = () => {
         Enable “Overlay Scrollbars” by visiting <code>chrome://flags/</code> for a visually sleeker scrollbar
         experience.
       </p>
-
       {/* Section 2: Firefox */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">2. Firefox</h3>
       <p className="mb-4">
         Firefox works out of the box on Wayland, with VA-API support and touchpad navigation enabled by default. 🎉
       </p>
-
       {/* Section 3: Text Editors and IDEs */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">3. Text Editors and IDEs</h3>
       <p className="mb-2">
@@ -103,7 +130,6 @@ const AdjustingProgramsToUseWayland = () => {
         and add:
       </p>
       <CodeBlockWithCopy code={`-Dawt.toolkit.name=WLToolkit`} />
-
       {/* Section 4: Insomnia and Signal Desktop */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">4. Insomnia and Signal Desktop</h3>
       <p className="mb-2">
@@ -131,7 +157,6 @@ const AdjustingProgramsToUseWayland = () => {
         </a>{' '}
         GNOME extension.
       </p>
-
       {/* Section 5: MongoDB Compass */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">5. MongoDB Compass</h3>
       <p className="mb-2">Update the desktop file to:</p>
@@ -140,7 +165,6 @@ const AdjustingProgramsToUseWayland = () => {
 --enable-features=UseOzonePlatform,WaylandWindowDecorations
 --ozone-platform=wayland --ignore-additional-command-line-flags %U`}
       />
-
       {/* Section 6: Spotify */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">6. Spotify</h3>
       <p className="mb-2">Edit the desktop file to include:</p>
@@ -156,7 +180,6 @@ const AdjustingProgramsToUseWayland = () => {
         </a>
         .
       </p>
-
       {/* Section 7: Flatpak Applications */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">7. Flatpak Applications</h3>
       <p className="mb-2">
@@ -171,14 +194,12 @@ const AdjustingProgramsToUseWayland = () => {
         to manage permissions. Open Flatseal, select All Applications, and enable the Wayland windowing system{' '}
         <span className="rounded bg-zinc-800 px-1 py-0.5 font-mono text-zinc-100">socket=wayland</span>.
       </p>
-
       {/* Section 8: Steam */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">8. Steam</h3>
       <p className="mb-2">
-        Unfortunately, Steam is not Wayland-compatible yet. 😢 You&apos;ll still have to deal with XWayland, meaning it will
-        remain blurry or won&apos;t scale properly for the time being. Let&apos;s hope Valve releases updates soon!
+        Unfortunately, Steam is not Wayland-compatible yet. 😢 You&apos;ll still have to deal with XWayland, meaning it
+        will remain blurry or won&apos;t scale properly for the time being. Let&apos;s hope Valve releases updates soon!
       </p>
-
       {/* Conclusion */}
       <h2 className="mb-2 mt-8 text-2xl font-bold">Conclusion</h2>
       <p className="mb-2">
