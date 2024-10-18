@@ -10,11 +10,8 @@ const MotionDiv = motion.create("div");
 
 export const Project = ({ modalContent, projectLink, description, imgSrc, title, code, tech, blurDataURL }) => {
   const [hovered, setHovered] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false);
-
   const controls = useAnimation();
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -25,6 +22,16 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
       controls.start("hidden");
     }
   }, [isInView, controls]);
+
+  // Preload the modal images after the component mounts
+  useEffect(() => {
+    const imagesToPreload = [imgSrc];
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [imgSrc]);
 
   return (
     <>
