@@ -3,12 +3,14 @@ import { useEffect, useRef, useState } from "react";
 
 const NUM_LINES = 30; // Adjust this as needed
 
+const MotionNav = motion.create("nav");
+
 const SideNavigation = ({ blogEntries, onNavigate }) => {
   const [isHovered, setIsHovered] = useState(false);
   const mouseY = useMotionValue(Infinity);
 
   return (
-    <motion.nav
+    <MotionNav
       onMouseMove={(e) => {
         mouseY.set(e.clientY);
         setIsHovered(true);
@@ -31,7 +33,7 @@ const SideNavigation = ({ blogEntries, onNavigate }) => {
           />
         );
       })}
-    </motion.nav>
+    </MotionNav>
   );
 };
 
@@ -49,11 +51,9 @@ const LinkLine = ({ mouseY, isHovered, title, onClick }) => {
     return val - (bounds?.y || 0) - (bounds?.height || 0) / 2;
   });
 
-  // Styles for non-link lines
   const lineWidthRaw = useTransform(distance, [-80, 0, 80], [15, 100, 15]);
   const lineWidth = useSpring(lineWidthRaw, SPRING_OPTIONS);
 
-  // Styles for link lines
   const linkWidth = useSpring(25, SPRING_OPTIONS);
 
   useEffect(() => {

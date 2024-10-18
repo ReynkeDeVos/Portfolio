@@ -49,12 +49,11 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
           <Image
             src={imgSrc}
             alt={`An image of the ${title} project.`}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top"
-            className="absolute top-0 left-0"
-            placeholder="blur" // Enables blurred placeholder
-            blurDataURL={blurDataURL} // Sets the blurred image
+            fill
+            className="absolute top-0 left-0 object-cover object-top"
+            placeholder="blur"
+            blurDataURL={blurDataURL}
+            unoptimized={imgSrc.endsWith("pokebattle.webp")}
           />
         </div>
         <div className="mt-6">
@@ -94,6 +93,7 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
         title={title}
         code={code}
         tech={tech}
+        blurDataURL={blurDataURL}
       />
     </>
   );

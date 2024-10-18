@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import CodeBlockWithCopy from "./CodeBlockWithCopy";
 
+const MotionDiv = motion.create("div");
+
 const SpringModal = ({ isOpen, setIsOpen }) => {
   return (
     <AnimatePresence>
@@ -12,9 +14,9 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}>
-          <motion.div
+          <MotionDiv
             className="bg-zinc-800 p-4 rounded-md shadow-md relative w-full max-w-md mx-4 cursor-default"
-            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+            onClick={(e) => e.stopPropagation()}
             initial={{ scale: 0.5, rotate: "12deg" }}
             animate={{ scale: 1, rotate: "0deg" }}
             exit={{ scale: 0.5, rotate: "0deg" }}>
@@ -30,7 +32,7 @@ const SpringModal = ({ isOpen, setIsOpen }) => {
             <CodeBlockWithCopy
               code={`gsettings set org.gnome.mutter experimental-features '["scale-monitor-framebuffer", "xwayland-native-scaling"]'`}
             />
-          </motion.div>
+          </MotionDiv>
         </motion.div>
       )}
     </AnimatePresence>
