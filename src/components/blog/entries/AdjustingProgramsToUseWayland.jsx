@@ -10,7 +10,7 @@ const AdjustingProgramsToUseWayland = () => {
       <h2 className="text-2xl font-bold mt-8 mb-2">Introduction</h2>
       <p className="mb-2">
         Okay, picture this: you're sitting there, feeling like a tech wizard 🧙‍♂️ with your Arch setup, running GNOME with
-        fractional scaling enabled. You’ve got the fancy{" "}
+        fractional scaling enabled with the fancy{" "}
         <span
           className="bg-zinc-800 text-zinc-100 px-1 py-0.5 rounded font-mono relative cursor-pointer"
           onClick={() => setIsOpen(true)}>
@@ -31,10 +31,11 @@ const AdjustingProgramsToUseWayland = () => {
         Adjusting the launch settings of the programs to run natively on Wayland and boom 💥—sharp visuals, better
         hardware acceleration, and a much happier me. Below are the steps I took to make this magic happen, so you too
         can escape the dreaded XWayland blur and join the crispy-clear side of Wayland. 😎
+        To be fair, KDE Plasma 6 & GNOME 47 have made great strides in improving XWayland support, but nothing beats native Wayland.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-indigo-400">
-        Here are the instructions for configuring popular programs to run on Wayland
+        How to configure popular programs to run on Wayland
       </h2>
 
       {/* Section 1: Google Chrome/Chromium */}
