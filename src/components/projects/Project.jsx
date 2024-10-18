@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { ProjectModal } from "./ProjectModal";
 import Reveal from "../util/Reveal";
-import Image from "next/image";
+import NextImage from "next/image"; // Renamed import to avoid conflict
 
 const MotionDiv = motion.create("div");
 
@@ -22,6 +22,14 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
       controls.start("hidden");
     }
   }, [isInView, controls]);
+
+  // Preload the image using the native Image constructor
+  useEffect(() => {
+    if (imgSrc) {
+      const img = new Image(); // using the native Image constructor
+      img.src = imgSrc;
+    }
+  }, [imgSrc]);
 
   return (
     <>
@@ -43,8 +51,8 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
             transition: "transform 0.3s ease",
           }}
           onClick={() => setIsOpen(true)}>
-          <Image
-            src={imgSrc}
+          <NextImage
+            src={imgSrc} // using Next.js's Image component with the updated import
             alt={`An image of the ${title} project.`}
             fill
             className="absolute top-0 left-0 object-cover object-top"
