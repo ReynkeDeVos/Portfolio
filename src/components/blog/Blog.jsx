@@ -1,25 +1,25 @@
-import Link from "next/link";
-import AdjustingProgramsToUseWayland from "./entries/AdjustingProgramsToUseWayland";
-import { useState, useRef } from "react";
-import SideNavigation from "./SideNavigation";
-import BlogBanner from "./BlogBanner";
+import Link from 'next/link';
+import AdjustingProgramsToUseWayland from './entries/AdjustingProgramsToUseWayland';
+import { useState, useRef } from 'react';
+import SideNavigation from './SideNavigation';
+import BlogBanner from './BlogBanner';
 
 // More tags for categorization, styled to match the portfolio style
-const tags = ["Tech", "Linux", "Frontend", "TypeScript", "React", "Next.js", "Tailwind", "Backend"];
+const tags = ['Tech', 'Linux', 'Frontend', 'TypeScript', 'React', 'Next.js', 'Tailwind', 'Backend'];
 
 const blogEntries = [
   {
-    title: "Fractional Scaling, GNOME and XWayland",
-    date: "2024-10-17",
+    title: 'Fractional Scaling, GNOME and XWayland',
+    date: '2024-10-17',
     component: <AdjustingProgramsToUseWayland />,
-    tags: ["Tech", "Linux", "Frontend"],
-    id: "post-1",
+    tags: ['Tech', 'Linux', 'Frontend'],
+    id: 'post-1',
   },
   // Add more blog entries here with unique IDs
 ];
 
 const Blog = () => {
-  const [selectedTag, setSelectedTag] = useState("");
+  const [selectedTag, setSelectedTag] = useState('');
   const filteredEntries = blogEntries.filter((entry) => (selectedTag ? entry.tags.includes(selectedTag) : true));
 
   // Create refs for each blog post to allow scrolling
@@ -27,7 +27,7 @@ const Blog = () => {
 
   // Function to handle navigation click
   const handleNavigate = (id) => {
-    postRefs.current[id]?.scrollIntoView({ behavior: "smooth" });
+    postRefs.current[id]?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -38,12 +38,12 @@ const Blog = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-8 max-w-5xl text-zinc-100">
+      <div className="container mx-auto max-w-5xl px-4 py-8 text-zinc-100">
         {/* Return to main page button at the top with OutlineButton styles */}
         <div className="mb-6">
           <Link
             href="/"
-            className="relative z-0 flex items-center gap-2 overflow-hidden rounded-md border-[1px] border-white px-4 py-2 font-medium text-sm transition-all duration-300 before:absolute before:inset-0 before:-z-10 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-[100%] before:bg-white before:transition-transform before:duration-1000 before:content-[''] hover:text-zinc-950 hover:before:translate-x-[0%] hover:before:translate-y-[0%] active:scale-95 text-white">
+            className="relative z-0 flex items-center gap-2 overflow-hidden rounded-md border-[1px] border-white px-4 py-2 text-sm font-medium text-white transition-all duration-300 before:absolute before:inset-0 before:-z-10 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-[100%] before:bg-white before:transition-transform before:duration-1000 before:content-[''] hover:text-zinc-950 hover:before:translate-x-[0%] hover:before:translate-y-[0%] active:scale-95">
             Return to Main Page
           </Link>
         </div>
@@ -52,23 +52,23 @@ const Blog = () => {
         <BlogBanner />
 
         {/* Tag filters */}
-        <div className="flex flex-wrap gap-2 mb-6 mt-4">
+        <div className="mb-6 mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => {
             const isSelected = selectedTag === tag;
 
             const baseClasses =
               "px-3 py-1 relative z-0 flex items-center gap-2 overflow-hidden rounded-md border-[1px] border-white font-medium text-sm transition-all duration-300 active:scale-95 before:absolute before:inset-0 before:-z-10 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-full before:bg-white before:transition-transform before:duration-1000 before:content-['']";
 
-            const selectedClasses = "bg-zinc-700 text-zinc-950 before:translate-x-[0%] before:translate-y-[0%]";
+            const selectedClasses = 'bg-zinc-700 text-zinc-950 before:translate-x-[0%] before:translate-y-[0%]';
 
             const unselectedClasses =
-              "bg-zinc-800 text-zinc-200 lg:hover:bg-zinc-700 lg:hover:text-zinc-950 lg:hover:before:translate-x-[0%] lg:hover:before:translate-y-[0%]";
+              'bg-zinc-800 text-zinc-200 lg:hover:bg-zinc-700 lg:hover:text-zinc-950 lg:hover:before:translate-x-[0%] lg:hover:before:translate-y-[0%]';
 
             return (
               <button
                 key={tag}
                 className={`${baseClasses} ${isSelected ? selectedClasses : unselectedClasses}`}
-                onClick={() => setSelectedTag(isSelected ? "" : tag)}>
+                onClick={() => setSelectedTag(isSelected ? '' : tag)}>
                 {tag}
               </button>
             );

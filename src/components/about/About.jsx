@@ -1,29 +1,29 @@
-import { AiOutlineArrowRight } from "react-icons/ai";
-import { SectionHeader } from "../util/SectionHeader";
-import Reveal from "../util/Reveal";
-import { MyLinks } from "../nav/Header";
-import { Stats } from "./Stats";
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { SectionHeader } from '../util/SectionHeader';
+import Reveal from '../util/Reveal';
+import { MyLinks } from '../nav/Header';
+import { Stats } from './Stats';
 
 export const About = () => {
   return (
     <section id="about" className="section-wrapper">
       <SectionHeader title="About" dir="l" />
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_300px]">
         <div className="space-y-4">
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              <span className="bg-indigo-500 text-white py-2 px-3 rounded font-bold mr-1 float-left text-2xl">H</span>
+              <span className="float-left mr-1 rounded bg-indigo-500 px-3 py-2 text-2xl font-bold text-white">H</span>
               i! I'm Renke Brixel, a web developer with experience in both front-end and back-end technologies. After
-              completing a Full-Stack Web & App Development Bootcamp at WBS Coding School, I’ve developed a
-              foundation in building scalable, efficient, and user-centric applications across the full stack.
+              completing a Full-Stack Web & App Development Bootcamp at WBS Coding School, I’ve developed a foundation
+              in building scalable, efficient, and user-centric applications across the full stack.
             </p>
           </Reveal>
           <Reveal>
             <p className="leading-relaxed text-zinc-300">
-              I have worked with modern front-end frameworks like React and Tailwind CSS, while also being
-              proficient in back-end technologies such as Node.js, Express, and MongoDB. Whether it's developing
-              responsive user interfaces or managing robust server-side architectures, I enjoy creating seamless digital
-              experiences from start to finish.
+              I have worked with modern front-end frameworks like React and Tailwind CSS, while also being proficient in
+              back-end technologies such as Node.js, Express, and MongoDB. Whether it's developing responsive user
+              interfaces or managing robust server-side architectures, I enjoy creating seamless digital experiences
+              from start to finish.
             </p>
           </Reveal>
           <Reveal>
