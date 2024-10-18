@@ -60,6 +60,6 @@ This project is configured to be deployed on Netlify. You can find the deploymen
 
 ## Acknowledgements
 
-This portfolio is heavily based on a template from [Hover](https://www.hover.dev/templates).
+This portfolio is heavily based on a template from [Hover](https://www.hover.dev/templates) by [TomIsLoading](https://github.com/TomIsLoading).
 
 Thank you for visiting my portfolio repository!
