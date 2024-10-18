@@ -4,10 +4,21 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
+import Image from "next/image";
 
 const MotionDiv = motion.create("div");
 
-export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isOpen, title, code, tech }) => {
+export const ProjectModal = ({
+  modalContent,
+  projectLink,
+  setIsOpen,
+  imgSrc,
+  isOpen,
+  title,
+  code,
+  tech,
+  blurDataURL,
+}) => {
   useEffect(() => {
     const body = document.querySelector("body");
 
@@ -16,22 +27,42 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
     } else {
       body.style.overflowY = "scroll";
     }
+
+    // Cleanup to reset overflow on unmount
+    return () => {
+      body.style.overflowY = "scroll";
+    };
   }, [isOpen]);
 
   const content = (
     <div
       className="fixed inset-0 z-50 px-4 py-12 bg-zinc-950/50 backdrop-blur overflow-y-scroll flex justify-center cursor-pointer"
       onClick={() => setIsOpen(false)}>
-      <button className="absolute top-4 md:top-6 text-xl right-4">
+      <button
+        className="absolute top-4 md:top-6 text-xl right-4 text-zinc-300 hover:text-indigo-300 transition-colors"
+        onClick={() => setIsOpen(false)}>
         <MdClose />
       </button>
 
       <MotionDiv
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
         onClick={(e) => e.stopPropagation()}
         className="w-full max-w-2xl h-fit rounded-lg overflow-hidden bg-zinc-900 shadow-lg cursor-auto">
-        <img className="w-full max-h-[40vh] object-scale-down" src={imgSrc} alt={`An image of the ${title} project.`} />
+        <div className="w-full">
+          <Image
+            src={imgSrc}
+            alt={`An image of the ${title} project.`}
+            width={800}
+            height={600}
+            className="w-full h-auto max-h-[40vh] object-scale-down"
+            placeholder="blur"
+            blurDataURL={blurDataURL}
+            unoptimized={imgSrc.endsWith("pokebattle.webp")} // Apply only to animated image
+          />
+        </div>
+
         <div className="p-8">
           <h4 className="text-3xl font-bold mb-2">{title}</h4>
           <div className="flex flex-wrap gap-2 text-sm text-indigo-300">{tech.join(" - ")}</div>
@@ -66,5 +97,5 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
 
   if (!isOpen) return null;
 
-  return ReactDOM.createPortal(content, document.getElementById("root"));
+  return ReactDOM.createPortal(content, document.getElementById("__next"));
 };
