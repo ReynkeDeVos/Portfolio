@@ -73,7 +73,7 @@ const projects = [
             target="_blank"
             rel="noopener noreferrer"
             className="text-indigo-300 hover:text-indigo-400">
-            "Have I Been Pwned"
+            &quot;Have I Been Pwned&quot;
           </a>{' '}
           API to prevent the use of compromised credentials.
         </p>
