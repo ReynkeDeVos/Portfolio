@@ -47,7 +47,7 @@ const AdjustingProgramsToUseWayland = () => {
         <Image
           src="/project-imgs/blurry-cut.avif"
           alt="Chromium on Wayland vs XWayland in 2019"
-          sizes="100vw"
+          sizes="100svw"
           style={{
             width: '75%',
             height: 'auto',
