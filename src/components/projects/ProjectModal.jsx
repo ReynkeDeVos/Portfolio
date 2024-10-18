@@ -50,6 +50,7 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
             layout="fill"
             objectFit="contain" // Ensures image fits without cropping
             blurDataURL={imgSrc.endsWith("pokebattle.webp")}
+            priority
           />
         </div>
 
