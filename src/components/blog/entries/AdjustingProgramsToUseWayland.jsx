@@ -9,7 +9,7 @@ const AdjustingProgramsToUseWayland = () => {
     <div className="relative mx-auto text-zinc-300">
       <h2 className="mb-2 mt-8 text-2xl font-bold">Introduction</h2>
       <p className="mb-2">
-        Okay, picture this: you're sitting there, feeling like a tech wizard 🧙‍♂️ with your Arch setup, running GNOME with
+        Okay, picture this: you&apos;re sitting there, feeling like a tech wizard 🧙‍♂️ with your Arch setup, running GNOME with
         fractional scaling enabled with the fancy{' '}
         <span
           className="relative cursor-pointer rounded bg-zinc-800 px-1 py-0.5 font-mono text-zinc-100"
@@ -175,8 +175,8 @@ const AdjustingProgramsToUseWayland = () => {
       {/* Section 8: Steam */}
       <h3 className="mb-2 mt-6 text-xl font-bold text-indigo-300">8. Steam</h3>
       <p className="mb-2">
-        Unfortunately, Steam is not Wayland-compatible yet. 😢 You'll still have to deal with XWayland, meaning it will
-        remain blurry or won't scale properly for the time being. Let's hope Valve releases updates soon!
+        Unfortunately, Steam is not Wayland-compatible yet. 😢 You&apos;ll still have to deal with XWayland, meaning it will
+        remain blurry or won&apos;t scale properly for the time being. Let&apos;s hope Valve releases updates soon!
       </p>
 
       {/* Conclusion */}

@@ -15,7 +15,7 @@ export const Reveal = ({ children, width = 'w-fit' }) => {
       mainControls.start('visible');
       slideControls.start('visible');
     }
-  }, [isInView]);
+  }, [isInView, mainControls, slideControls]);
 
   return (
     <div ref={ref} className={`relative overflow-hidden ${width}`}>
