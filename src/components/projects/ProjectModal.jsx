@@ -62,7 +62,7 @@ export const ProjectModal = ({
             placeholder="blur"
             blurDataURL={blurDataURL}
             priority // Ensures high priority for the image (preloads it)
-            sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px" // Serve different sizes based on screen width
+            // sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px" // Serve different sizes based on screen width
             unoptimized={imgSrc.endsWith('pokebattle.webp')}
           />
         </div>
