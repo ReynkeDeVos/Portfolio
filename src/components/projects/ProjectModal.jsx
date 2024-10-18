@@ -57,8 +57,6 @@ export const ProjectModal = ({
             width={800}
             height={600}
             className="w-full h-auto max-h-[40vh] object-scale-down"
-            placeholder="blur"
-            blurDataURL={blurDataURL}
             unoptimized={imgSrc.endsWith("pokebattle.webp")} // Apply only to animated image
           />
         </div>
