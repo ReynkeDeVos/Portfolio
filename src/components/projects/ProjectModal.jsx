@@ -40,15 +40,16 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
         transition={{ duration: 0.5 }}
         onClick={(e) => e.stopPropagation()}
         className="w-full max-w-2xl h-fit rounded-lg overflow-hidden bg-zinc-900 shadow-lg cursor-auto">
-        <div className="w-full">
+        {/* Image container with object-contain */}
+        <div className="relative w-full h-64 md:h-96">
+          {" "}
+          {/* Adjust height as necessary */}
           <Image
             src={imgSrc}
             alt={`An image of the ${title} project.`}
-            width={800}
-            height={600}
-            className="w-full h-auto max-h-[40vh] object-scale-down"
-            priority
-            unoptimized={imgSrc.endsWith("pokebattle.webp")} // Apply only to animated image
+            layout="fill"
+            objectFit="contain" // Ensures image fits without cropping
+            blurDataURL={imgSrc.endsWith("pokebattle.webp")}
           />
         </div>
 
