@@ -37,7 +37,7 @@ To get started with this project, follow these steps:
    pnpm install
    ```
 
-3. **Run the development server**:D
+3. **Run the development server**:
 
    ```sh
    pnpm dev

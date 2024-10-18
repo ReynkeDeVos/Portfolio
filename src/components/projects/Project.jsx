@@ -71,11 +71,11 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
               <h4 className="max-w-[calc(100%_-_150px)] shrink-0 text-lg font-bold">{title}</h4>
               <div className="h-[1px] w-full bg-zinc-600" />
 
-              <Link href={code} target="_blank" rel="nofollow">
+              <Link href={code} target="_blank" rel="nofollow" aria-label="View Source Code on GitHub">
                 <AiFillGithub className="text-xl text-zinc-300 transition-colors hover:text-indigo-300" />
               </Link>
 
-              <Link href={projectLink} target="_blank" rel="nofollow">
+              <Link href={projectLink} target="_blank" rel="nofollow" aria-label="View Live Project">
                 <AiOutlineExport className="text-xl text-zinc-300 transition-colors hover:text-indigo-300" />
               </Link>
             </div>
