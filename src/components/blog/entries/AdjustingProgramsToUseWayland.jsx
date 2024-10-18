@@ -28,9 +28,9 @@ const AdjustingProgramsToUseWayland = () => {
       <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <p className="mb-2">
-        Adjusting the programs to run natively on Wayland and boom 💥—sharp visuals, better hardware acceleration, and a
-        much happier me. Below are the steps I took to make this magic happen, so you too can escape the dreaded
-        XWayland blur and join the crispy-clear side of Wayland. 😎
+        Adjusting the launch settings of the programs to run natively on Wayland and boom 💥—sharp visuals, better
+        hardware acceleration, and a much happier me. Below are the steps I took to make this magic happen, so you too
+        can escape the dreaded XWayland blur and join the crispy-clear side of Wayland. 😎
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-indigo-400">
