@@ -1,8 +1,7 @@
-// SideBarLink.jsx
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export const SideBarLink = ({ setSelected, selected, children, href, value }) => {
   return (
