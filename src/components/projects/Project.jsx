@@ -25,10 +25,12 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
 
   // Preload the image using the native Image constructor
   useEffect(() => {
-    if (imgSrc) {
+    const imagesToPreload = [imgSrc];
+
+    imagesToPreload.forEach((src) => {
       const img = new Image(); // Using the native Image constructor
-      img.src = imgSrc;
-    }
+      img.src = src;
+    });
   }, [imgSrc]);
 
   return (
@@ -58,6 +60,8 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
             className="absolute top-0 left-0 object-cover object-top"
             placeholder="blur"
             blurDataURL={blurDataURL}
+            priority // Ensures high priority for the image (preloads it)
+            sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px" // Serve different sizes based on screen width
             unoptimized={imgSrc.endsWith("pokebattle.webp")}
           />
         </div>

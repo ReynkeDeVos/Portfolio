@@ -47,6 +47,7 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
             width={800}
             height={600}
             className="w-full h-auto max-h-[40vh] object-scale-down"
+            priority
             unoptimized={imgSrc.endsWith("pokebattle.webp")} // Apply only to animated image
           />
         </div>
