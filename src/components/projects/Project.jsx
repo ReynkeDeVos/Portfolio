@@ -66,7 +66,7 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
           />
         </div>
         <div className="mt-6">
-          <Reveal width="w-full">
+          <Reveal width="w-90">
             <div className="flex w-full items-center gap-2">
               <h4 className="max-w-[calc(100%_-_150px)] shrink-0 text-lg font-bold">{title}</h4>
               <div className="h-[1px] w-full bg-zinc-600" />
