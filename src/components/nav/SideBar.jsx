@@ -36,19 +36,39 @@ export const SideBar = () => {
       <span className="my-4 flex size-10 shrink-0 items-center justify-center text-xl font-black leading-[1]">
         R<span className="text-indigo-500">.</span>
       </span>
-      <SideBarLink selected={selected} setSelected={setSelected} value="about" href="#about">
+      <SideBarLink
+        selected={selected}
+        setSelected={setSelected}
+        value="about"
+        href="#about"
+        aria-label="Navigate to About Section">
         About
       </SideBarLink>
-      <SideBarLink selected={selected} setSelected={setSelected} value="projects" href="#projects">
+
+      <SideBarLink
+        selected={selected}
+        setSelected={setSelected}
+        value="projects"
+        href="#projects"
+        aria-label="Navigate to Projects Section">
         Projects
       </SideBarLink>
-      <SideBarLink selected={selected} setSelected={setSelected} value="experience" href="#experience">
+
+      <SideBarLink
+        selected={selected}
+        setSelected={setSelected}
+        value="experience"
+        href="#experience"
+        aria-label="Navigate to Experience Section">
         Exp.
       </SideBarLink>
-      <SideBarLink selected={selected} setSelected={setSelected} value="contact" href="#contact">
-        Contact
-      </SideBarLink>
-      <SideBarLink href="/blog" value="blog" selected={selected} setSelected={setSelected}>
+
+      <SideBarLink
+        href="/blog"
+        value="blog"
+        selected={selected}
+        setSelected={setSelected}
+        aria-label="Navigate to Blog Page">
         Blog
       </SideBarLink>
     </MotionNav>

@@ -17,14 +17,16 @@ export const MyLinks = () => (
       className="text-zinc-300 transition-colors hover:text-indigo-300"
       href="https://www.linkedin.com/in/rbrixel/"
       target="_blank"
-      rel="nofollow">
+      rel="nofollow"
+      aria-label="LinkedIn Profile">
       <SiLinkedin />
     </Link>
     <Link
       className="text-zinc-300 transition-colors hover:text-indigo-300"
       href="https://github.com/ReynkeDeVos"
       target="_blank"
-      rel="nofollow">
+      rel="nofollow"
+      aria-label="GitHub Profile">
       <SiGithub />
     </Link>
     <Link className="text-zinc-300 transition-colors hover:text-indigo-300" href="/blog">

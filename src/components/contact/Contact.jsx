@@ -17,11 +17,16 @@ export const Contact = () => {
             <Link
               href="https://www.linkedin.com/in/rbrixel/"
               target="_blank"
-              className="text-indigo-300 hover:underline">
+              className="text-indigo-300 hover:underline"
+              aria-label="LinkedIn Profile">
               LinkedIn
             </Link>{' '}
             or{' '}
-            <Link href="https://github.com/ReynkeDeVos" target="_blank" className="text-indigo-300 hover:underline">
+            <Link
+              href="https://github.com/ReynkeDeVos"
+              target="_blank"
+              className="text-indigo-300 hover:underline"
+              aria-label="GitHub Profile">
               GitHub
             </Link>{' '}
             if that&apos;s more your speed.
