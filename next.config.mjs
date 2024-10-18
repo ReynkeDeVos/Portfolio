@@ -4,7 +4,10 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   swcMinify: true,
-  // images: {},  // No external domains needed since images are served from the public folder
+  // Enable AVIF image format with WebP as a fallback
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
 };
 
 export default withBundleAnalyzer({
