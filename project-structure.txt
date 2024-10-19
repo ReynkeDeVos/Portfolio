@@ -10,17 +10,17 @@
 │   ├── CV_Renke_Brixel.pdf
 │   ├── favicon.ico
 │   └── project-imgs
-│       ├── elder-gym.jpg
+│       ├── elder-gym.avif
 │       ├── elder-gym_tiny.avif
 │       ├── elder-gym_tiny.txt
-│       ├── hackz0rs-news.jpg
+│       ├── hackz0rs-news.avif
 │       ├── hackz0rs-news_tiny.avif
 │       ├── hackz0rs-news_tiny.txt
 │       ├── og-image.avif
 │       ├── pokebattle.webp
 │       ├── poke_tiny.avif
 │       ├── poke_tiny.txt
-│       ├── todo-app.jpg
+│       ├── todo-app.avif
 │       ├── todo-app_tiny.avif
 │       └── todo-app_tiny.txt
 ├── README.md

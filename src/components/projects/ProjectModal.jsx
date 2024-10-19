@@ -42,7 +42,6 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
         className="h-fit w-full max-w-2xl cursor-auto overflow-hidden rounded-lg bg-zinc-900 shadow-lg">
         {/* Image container with object-contain */}
         <div className="relative h-64 w-full md:h-96">
-          {' '}
           {/* Adjust height as necessary */}
           <Image
             src={imgSrc}
@@ -52,8 +51,8 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
             // placeholder="blur"
             // blurDataURL={blurDataURL}
             priority // Ensures high priority for the image (preloads it)
-            // sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px" // Serve different sizes based on screen width
-            unoptimized
+            // sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" // Serve different sizes based on screen width
+            unoptimized={imgSrc.endsWith('pokebattle.webp')}
           />
         </div>
 
