@@ -60,7 +60,7 @@ const AdjustingProgramsToUseWayland = () => {
           onClick={() => setImageModalOpen(true)} // Open modal on image click
         />
         <span className="mt-1 block text-center text-sm text-gray-500">
-          Comparison of Chromium on Wayland (left) vs XWayland (right) in 2019.
+          Comparison of Firefox on Wayland (left) vs Chromium on XWayland (right) in 2019.
         </span>
       </div>
       <ImageModal isOpen={imageModalOpen} setIsOpen={setImageModalOpen} /> {/* Image modal for full-screen view */}
