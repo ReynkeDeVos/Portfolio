@@ -8,7 +8,7 @@ import NextImage from 'next/image'; // Renamed import to avoid conflict with com
 
 const MotionDiv = motion.create('div');
 
-export const Project = ({ modalContent, projectLink, description, imgSrc, title, code, tech }) => {
+export const Project = ({ modalContent, projectLink, description, imgSrc, title, code, tech, blurDataURL }) => {
   const [hovered, setHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const controls = useAnimation();
@@ -59,6 +59,7 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
             fill
             className="absolute left-0 top-0 object-cover object-top"
             placeholder="blur"
+            blurDataURL={blurDataURL}
             // priority // Ensures high priority for the image (preloads it)
             // sizes="(max-width: 600px) 480px, (max-width: 1200px) 800px, 1200px" // Serve different sizes based on screen width
             unoptimized={imgSrc.endsWith('pokebattle.avif')}
