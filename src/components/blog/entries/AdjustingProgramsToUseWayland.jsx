@@ -58,6 +58,7 @@ const AdjustingProgramsToUseWayland = () => {
           placeholder="blur"
           blurDataURL="data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAAD5bWV0YQAAAAAAAAAvaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAFBpY3R1cmVIYW5kbGVyAAAAAA5waXRtAAAAAAABAAAAHmlsb2MAAAAARAAAAQABAAAAAQAAASEAAAFxAAAAKGlpbmYAAAAAAAEAAAAaaW5mZQIAAAAAAQAAYXYwMUNvbG9yAAAAAGppcHJwAAAAS2lwY28AAAAUaXNwZQAAAAAAAADIAAAAZgAAABBwaXhpAAAAAAMICAgAAAAMYXYxQ4EgAAAAAAATY29scm5jbHgAAQANAAaAAAAAF2lwbWEAAAAAAAAAAQABBAECgwQAAAF5bWRhdAoNIAAAA7Y+U//mgIaDSDLfAhAAkAAeaEIKBRcOuVzL+99Q/DkqLXivzi7Hhk4RuSYBrGOAubxEFcJYiVMW85pGw2TGnA/c0MHn/2RYhkPKm3bQjCBGM5JTPjAFkEfKRhpBX9FS1S8MH5/LIthVYThYttxpCMci1w45z4zp+YOnSri3+Wz+/67Tzkl938QpRneYMdqp3bFSOCMBlzjeqNl0npALe8CcR0MzknGYhn4dDpuKHkPDI4Z0AGiyfrfmeKPY48EKVpjx3PTyjA16jCr1s4NyYZ4ADkfRawx00ih+umYw9bpIsH1Sdgd+EcO2i00h1LVT80b0v1kldj18HJ6treBgaFNI/uF+gJrGxIx4ZDRTcZvwftMn/ge1RkGmpGimIGKmtHqkHP5giZD4UgTTvA6/WIhNjJgUmaBpjwOEcyUmovUYryRl7uMC3C59kJvsJ4Bfx+dpaByglnHm9paxOZrfqywm8kRluQTQiSDXgA=="
           onClick={() => setImageModalOpen(true)} // Open modal on image click
+          priority // Preload image
         />
         <span className="mt-1 block text-center text-sm text-gray-500">
           Comparison of Firefox on Wayland (left) vs Chromium on XWayland (right) in 2019.
