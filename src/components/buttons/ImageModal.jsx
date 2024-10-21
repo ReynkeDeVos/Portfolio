@@ -26,8 +26,10 @@ const ImageModal = ({ isOpen, setIsOpen }) => {
             alt="Chromium on Wayland vs XWayland in 2019"
             width={1200} // Use actual width of the image
             height={612} // Use actual height of the image
+            sizes="100svw"
             className="rounded-lg"
             style={{ userSelect: 'none' }}
+            priority
           />
           {/* Close button with hover effect */}
           <button
