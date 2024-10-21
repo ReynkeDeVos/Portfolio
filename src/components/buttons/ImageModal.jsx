@@ -26,6 +26,8 @@ const ImageModal = ({ isOpen, setIsOpen }) => {
               width={1200} // Use actual width of the image
               height={612} // Use actual height of the image
               className="rounded-lg"
+              priority // Preload image
+              unoptimized // Don't optimize image
             />
             {/* Close button placed very close to the image */}
             <button
