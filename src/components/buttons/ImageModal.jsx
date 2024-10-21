@@ -1,8 +1,23 @@
+import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { MdClose } from 'react-icons/md';
 
 const ImageModal = ({ isOpen, setIsOpen }) => {
+  useEffect(() => {
+    const body = document.querySelector('body');
+
+    if (isOpen) {
+      body.style.overflowY = 'hidden';
+    } else {
+      body.style.overflowY = 'scroll';
+    }
+
+    return () => {
+      body.style.overflowY = 'scroll'; // Ensure body scroll is reset when modal closes
+    };
+  }, [isOpen]);
+
   return (
     <AnimatePresence>
       <motion.div
