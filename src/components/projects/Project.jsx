@@ -57,6 +57,7 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
             src={imgSrc} // Using Next.js's Image component with the updated import
             alt={`An image of the ${title} project.`}
             fill
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" // Added sizes prop for responsive loading
             className="absolute left-0 top-0 object-cover object-top"
             placeholder="blur"
             blurDataURL={blurDataURL}
