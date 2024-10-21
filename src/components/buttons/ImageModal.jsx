@@ -27,6 +27,7 @@ const ImageModal = ({ isOpen, setIsOpen }) => {
             width={1200} // Use actual width of the image
             height={612} // Use actual height of the image
             className="rounded-lg"
+            style={{ userSelect: 'none' }}
           />
           {/* Close button with hover effect */}
           <button
