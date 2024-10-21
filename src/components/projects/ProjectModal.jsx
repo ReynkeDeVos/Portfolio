@@ -62,7 +62,7 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
             src={imgSrc}
             alt={`An image of the ${title} project.`}
             fill
-            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="100svw"
             style={{ objectFit: 'contain', userSelect: 'none' }} // Ensures the image fits without cropping
             unoptimized={imgSrc.endsWith('pokebattle.avif')}
           />
