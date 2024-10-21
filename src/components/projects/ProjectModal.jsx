@@ -50,9 +50,9 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
             objectFit="contain" // Ensures image fits without cropping
             // placeholder="blur"
             // blurDataURL={blurDataURL}
-            priority // Ensures high priority for the image (preloads it)
+            // priority // Ensures high priority for the image (preloads it)
             // sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" // Serve different sizes based on screen width
-            unoptimized={imgSrc.endsWith('pokebattle.webp')}
+            unoptimized={imgSrc.endsWith('pokebattle.avif')}
           />
         </div>
 

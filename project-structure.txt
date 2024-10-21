@@ -17,7 +17,7 @@
 │       ├── hackz0rs-news_tiny.avif
 │       ├── hackz0rs-news_tiny.txt
 │       ├── og-image.avif
-│       ├── pokebattle.webp
+│       ├── pokebattle.avif
 │       ├── poke_tiny.avif
 │       ├── poke_tiny.txt
 │       ├── todo-app.avif
