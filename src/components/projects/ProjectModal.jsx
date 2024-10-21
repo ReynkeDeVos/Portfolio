@@ -55,7 +55,7 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
         variants={modalAnimation}
         initial="hidden"
         animate={isOpen ? 'visible' : 'hidden'}
-        transition={{ duration: 0.5 }}>
+        transition={{ duration: 0.3 }}>
         {/* Image container */}
         <div className="relative h-64 w-full md:h-96">
           <Image
