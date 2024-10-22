@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm next build --turbo"      # Build command
+  command = "pnpm next build"      # Build command
   # Do not set 'publish' when using '@netlify/plugin-nextjs'
 
 [[plugins]]
