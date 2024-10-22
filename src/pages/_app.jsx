@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta name="keywords" content={keywords || 'web development, portfolio, Renke Brixel, entry level developer'} />
         <meta name="author" content={author || 'Renke Brixel'} />
-        <meta http-equiv="content-language" content="en" />
+        <meta httpEquiv="content-language" content="en" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={title || "Renke's WebDev Portfolio"} />
