@@ -20,11 +20,14 @@ const AdjustingProgramsToUseWayland = () => {
       <p className="mb-2">
         Okay, picture this: you&apos;re sitting there, feeling like a tech wizard 🧙‍♂️ with your Arch setup, running GNOME
         with fractional scaling enabled with the fancy{' '}
-        <span
-          className="relative cursor-pointer rounded bg-zinc-800 px-1 py-0.5 font-mono text-zinc-100"
-          onClick={() => setIsOpen(true)}>
+        <button
+          type="button"
+          className="relative rounded bg-zinc-800 px-1 py-0.5 font-mono text-zinc-100"
+          onClick={() => setIsOpen(true)}
+          onKeyDown={(e) => e.key === 'Enter' && setIsOpen(true)}
+          aria-label="Open gsettings information">
           gsettings
-        </span>{' '}
+        </button>{' '}
         command going on, allowing you to scale your desktop to 125%, 150%, or even 175%. Life should be good, right?
         But wait! Some of your apps look like they’ve been put through an Instagram blur filter, and not in a good way.
         😠
@@ -89,7 +92,7 @@ const AdjustingProgramsToUseWayland = () => {
       <p className="mb-2">
         <span className="rounded bg-zinc-800 px-1 py-0.5 font-mono text-zinc-100">
           --enable-features=VaapiVideoDecodeLinuxGL
-        </span>
+        </span>{' '}
         : Enables VA-API (hardware video acceleration) for using your GPU when watching videos in your browser.
       </p>
       <p className="mb-2">Additional flags:</p>
@@ -177,7 +180,7 @@ const AdjustingProgramsToUseWayland = () => {
           rel="noopener noreferrer"
           className="text-indigo-400 hover:underline">
           web app
-        </a>
+        </a>{' '}
         .
       </p>
       {/* Section 7: Flatpak Applications */}

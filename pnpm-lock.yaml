@@ -36,6 +36,9 @@ importers:
       '@netlify/plugin-nextjs':
         specifier: ^5.8.1
         version: 5.8.1
+      '@next/eslint-plugin-next':
+        specifier: ^15.0.3
+        version: 15.0.3
       eslint:
         specifier: ^9.15.0
         version: 9.15.0(jiti@1.21.6)
@@ -257,6 +260,9 @@ packages:
 
   '@next/eslint-plugin-next@15.0.1-canary.1':
     resolution: {integrity: sha512-JYVXvvhq8wnqtJtT33cj2NqkFr7hW6mIhiYi2Me1WPM/YU1LGjpVhR1UUTx1Hla0eU8D1fEgNZ8urDUR6rmzJQ==}
+
+  '@next/eslint-plugin-next@15.0.3':
+    resolution: {integrity: sha512-3Ln/nHq2V+v8uIaxCR6YfYo7ceRgZNXfTd3yW1ukTaFbO+/I8jNakrjYWODvG9BuR2v5kgVtH/C8r0i11quOgw==}
 
   '@next/swc-darwin-arm64@15.0.1-canary.1':
     resolution: {integrity: sha512-MY+jXeRpXZVVMirkEFvDNdcbJsELbloiyOneMGQ+zweKmLSJ8p4IELcehBJsHzwHhyO+K3z6V9uBHKmrTQZNtQ==}
@@ -1992,6 +1998,10 @@ snapshots:
   '@next/env@15.0.1-canary.1': {}
 
   '@next/eslint-plugin-next@15.0.1-canary.1':
+    dependencies:
+      fast-glob: 3.3.1
+
+  '@next/eslint-plugin-next@15.0.3':
     dependencies:
       fast-glob: 3.3.1
 

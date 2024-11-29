@@ -1,6 +1,18 @@
 [build]
-  command = "pnpm next build"      # Build command
-  # Do not set 'publish' when using '@netlify/plugin-nextjs'
+  command = "pnpm next build"
 
 [[plugins]]
-  package = "@netlify/plugin-nextjs"   # Making sure the Netlify plugin is used
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXT_CACHE_FOLDER = ".next/cache"
+
+[[redirects]]
+  from = "/_next/static/*"
+  to = "/static/:splat"
+  status = 200
+
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    cache-control = "public, max-age=31536000, immutable"
