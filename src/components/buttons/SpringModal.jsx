@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect } from 'react';
 import CodeBlockWithCopy from './CodeBlockWithCopy';
 
 const MotionDiv = motion.create('div');

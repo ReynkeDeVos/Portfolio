@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import CodeBlockWithCopy from '../../buttons/CodeBlockWithCopy';
-import SpringModal from '../../buttons/SpringModal';
 import ImageModal from '../../buttons/ImageModal';
+import SpringModal from '../../buttons/SpringModal';
 
 const AdjustingProgramsToUseWayland = () => {
   const [isOpen, setIsOpen] = useState(false);
