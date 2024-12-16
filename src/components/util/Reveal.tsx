@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { useAnimation, useInView, motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { JSX, useEffect, useRef } from "react";
 
 interface RevealProps {
   children: JSX.Element;
@@ -29,8 +29,7 @@ export const Reveal = ({ children, width = "w-fit" }: RevealProps) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-      >
+        transition={{ duration: 0.5, delay: 0.25 }}>
         {children}
       </motion.div>
       <motion.div
