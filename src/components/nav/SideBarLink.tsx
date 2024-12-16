@@ -1,6 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Dispatch, SetStateAction } from "react";
 
 interface Props {
   selected: string;
@@ -12,13 +12,7 @@ interface Props {
 
 const MotionLink = motion(Link);
 
-export const SideBarLink = ({
-  setSelected,
-  selected,
-  children,
-  href,
-  value,
-}: Props) => {
+export const SideBarLink = ({ setSelected, selected, children, href, value }: Props) => {
   return (
     <MotionLink
       initial={{ x: -70 }}
@@ -32,8 +26,7 @@ export const SideBarLink = ({
         selected === value
           ? "bg-zinc-800 border-indigo-500 opacity-100"
           : "border-transparent hover:border-r-zinc-50 opacity-50 hover:bg-zinc-900"
-      }`}
-    >
+      }`}>
       {children}
     </MotionLink>
   );

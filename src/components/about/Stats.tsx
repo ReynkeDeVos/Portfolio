@@ -43,7 +43,7 @@ export const Stats = () => {
         <div>
           <h4 className="flex items-center mb-6">
             <AiFillSmile className="text-indigo-500 text-2xl" />
-            <span className="font-bold ml-2">Technologies I&apos;m Exploring</span>
+            <span className="font-bold ml-2">Technologies I'm Exploring</span>
           </h4>
           <div className="flex flex-wrap gap-2 mb-12">
             <Chip>Next.js</Chip>

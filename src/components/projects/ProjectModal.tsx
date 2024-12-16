@@ -16,7 +16,16 @@ interface Props {
   modalContent: JSX.Element;
 }
 
-export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isOpen, title, code, tech }: Props) => {
+export const ProjectModal = ({
+  modalContent,
+  projectLink,
+  setIsOpen,
+  imgSrc,
+  isOpen,
+  title,
+  code,
+  tech,
+}: Props) => {
   useEffect(() => {
     const body = document.querySelector("body");
     if (isOpen) {
@@ -51,23 +60,37 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
         type="button"
         onClick={() => setIsOpen(false)}
         aria-label="Close modal"
-        className="fixed inset-0 w-full h-full bg-zinc-950/50 backdrop-blur cursor-auto"></button>
+        className="fixed inset-0 w-full h-full bg-zinc-950/50 backdrop-blur cursor-auto"
+      ></button>
 
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         onClick={(e) => e.stopPropagation()}
-        className="relative z-10 w-full max-w-2xl h-fit rounded-lg overflow-hidden bg-zinc-900 shadow-lg">
-        <button onClick={() => setIsOpen(false)} className="absolute top-4 md:top-6 right-4 text-xl" aria-label="Close">
+        className="relative z-10 w-full max-w-2xl h-fit rounded-lg overflow-hidden bg-zinc-900 shadow-lg"
+      >
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-4 md:top-6 right-4 text-xl"
+          aria-label="Close"
+        >
           <MdClose />
         </button>
 
-        <img className="w-full max-h-[40vh] object-contain object-top" src={imgSrc} alt={title} />
+        <img
+          className="w-full max-h-[40vh] object-contain object-top"
+          src={imgSrc}
+          alt={title}
+        />
         <div className="p-8">
           <h4 className="text-3xl font-bold mb-2">{title}</h4>
-          <div className="flex flex-wrap gap-2 text-sm text-indigo-300">{tech.join(" - ")}</div>
+          <div className="flex flex-wrap gap-2 text-sm text-indigo-300">
+            {tech.join(" - ")}
+          </div>
 
-          <div className="space-y-4 my-6 leading-relaxed text-sm text-zinc-300">{modalContent}</div>
+          <div className="space-y-4 my-6 leading-relaxed text-sm text-zinc-300">
+            {modalContent}
+          </div>
 
           <div>
             <p className="font-bold mb-2 text-xl">
@@ -79,7 +102,8 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
                 rel="nofollow"
                 className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
                 href={code}
-                aria-label={`View the source code for ${title}`}>
+                aria-label={`View the source code for ${title}`}
+              >
                 <AiFillGithub /> Source Code
               </Link>
               <Link
@@ -87,7 +111,8 @@ export const ProjectModal = ({ modalContent, projectLink, setIsOpen, imgSrc, isO
                 rel="nofollow"
                 className="text-zinc-300 hover:text-indigo-300 transition-colors flex items-center gap-1"
                 href={projectLink}
-                aria-label={`View the live project for ${title}`}>
+                aria-label={`View the live project for ${title}`}
+              >
                 <AiOutlineExport /> Live Project
               </Link>
             </div>

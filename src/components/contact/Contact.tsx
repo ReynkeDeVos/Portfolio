@@ -18,7 +18,8 @@ export const Contact = () => {
               href="https://www.linkedin.com/in/rbrixel/"
               target="_blank"
               className="text-indigo-300 hover:underline"
-              aria-label="LinkedIn Profile">
+              aria-label="LinkedIn Profile"
+            >
               LinkedIn
             </Link>{" "}
             or{" "}
@@ -26,7 +27,8 @@ export const Contact = () => {
               href="https://github.com/ReynkeDeVos"
               target="_blank"
               className="text-indigo-300 hover:underline"
-              aria-label="GitHub Profile">
+              aria-label="GitHub Profile"
+            >
               GitHub
             </Link>{" "}
             if that's more your speed.
