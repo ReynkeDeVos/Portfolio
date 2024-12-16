@@ -10,7 +10,7 @@ interface Props {
   value: string;
 }
 
-const MotionLink = motion(Link);
+const MotionLink = motion.create(Link);
 
 export const SideBarLink = ({ setSelected, selected, children, href, value }: Props) => {
   return (
