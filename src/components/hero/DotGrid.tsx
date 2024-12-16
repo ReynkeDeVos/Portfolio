@@ -41,7 +41,7 @@ const DotGrid = () => {
             className="dot-point h-2 w-2 rounded-full bg-gradient-to-b from-zinc-700 to-zinc-400 opacity-50 group-hover:from-indigo-500 group-hover:to-white"
             data-index={index}
           />
-        </div>
+        </div>,
       );
       index++;
     }

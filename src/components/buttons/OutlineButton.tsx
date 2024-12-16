@@ -25,7 +25,7 @@ export const OutlineButton = ({ children, className, ...rest }: Props) => {
         hover:before:translate-x-[0%]
         hover:before:translate-y-[0%]
         active:scale-95`,
-        className
+        className,
       )}
       {...rest}
     >

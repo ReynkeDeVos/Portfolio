@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { SideBarLink } from "./SideBarLink";
 
 export const SideBar = () => {
@@ -30,41 +30,20 @@ export const SideBar = () => {
       initial={{ x: -70 }}
       animate={{ x: 0 }}
       transition={{ duration: 0.5 }}
-      className="no-scrollbar bg-zinc-950 h-screen sticky top-0 left-0 z-20 flex flex-col items-center overflow-y-scroll"
-    >
+      className="no-scrollbar bg-zinc-950 h-screen sticky top-0 left-0 z-20 flex flex-col items-center overflow-y-scroll">
       <span className="shrink-0 text-xl font-black leading-[1] size-10 flex items-center justify-center my-4">
         B<span className="text-indigo-500">.</span>
       </span>
-      <SideBarLink
-        selected={selected}
-        setSelected={setSelected}
-        value="about"
-        href="#about"
-      >
+      <SideBarLink selected={selected} setSelected={setSelected} value="about" href="#about">
         About
       </SideBarLink>
-      <SideBarLink
-        selected={selected}
-        setSelected={setSelected}
-        value="projects"
-        href="#projects"
-      >
+      <SideBarLink selected={selected} setSelected={setSelected} value="projects" href="#projects">
         Projects
       </SideBarLink>
-      <SideBarLink
-        selected={selected}
-        setSelected={setSelected}
-        value="experience"
-        href="#experience"
-      >
+      <SideBarLink selected={selected} setSelected={setSelected} value="experience" href="#experience">
         Exp.
       </SideBarLink>
-      <SideBarLink
-        selected={selected}
-        setSelected={setSelected}
-        value="contact"
-        href="#contact"
-      >
+      <SideBarLink selected={selected} setSelected={setSelected} value="contact" href="#contact">
         Contact
       </SideBarLink>
     </motion.nav>

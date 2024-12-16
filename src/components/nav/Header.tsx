@@ -6,7 +6,9 @@ export const Header = () => {
   return (
     <header className="h-[72px] px-4 flex items-center justify-between sticky top-0 z-20 bg-zinc-900/50 backdrop-blur-md">
       <MyLinks />
-      <OutlineButton onClick={() => window.open("/CV_Renke_Brixel.pdf")}>My Resume</OutlineButton>
+      <OutlineButton onClick={() => window.open("/CV_Renke_Brixel.pdf")}>
+        My Resume
+      </OutlineButton>
     </header>
   );
 };
@@ -18,7 +20,8 @@ export const MyLinks = () => (
       href="https://www.linkedin.com/in/rbrixel/"
       target="_blank"
       rel="nofollow"
-      aria-label="LinkedIn Profile">
+      aria-label="LinkedIn Profile"
+    >
       <SiLinkedin />
     </Link>
     <Link
@@ -26,7 +29,8 @@ export const MyLinks = () => (
       href="https://github.com/ReynkeDeVos"
       target="_blank"
       rel="nofollow"
-      aria-label="GitHub Profile">
+      aria-label="GitHub Profile"
+    >
       <SiGithub />
     </Link>
   </div>
