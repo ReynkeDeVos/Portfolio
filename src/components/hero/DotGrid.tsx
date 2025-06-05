@@ -1,27 +1,26 @@
-import anime from "animejs";
+import { animate, stagger } from "animejs";
 
 const GRID_WIDTH = 25;
 const GRID_HEIGHT = 20;
 
 const DotGrid = () => {
   const handleDotClick = (e: any) => {
-    anime({
-      targets: ".dot-point",
+    animate(".dot-point", {
       scale: [
-        { value: 1.35, easing: "easeOutSine", duration: 250 },
-        { value: 1, easing: "easeInOutQuad", duration: 500 },
+        { to: 1.35, ease: "outSine", duration: 250 },
+        { to: 1, ease: "inOutQuad", duration: 500 },
       ],
       translateY: [
-        { value: -15, easing: "easeOutSine", duration: 250 },
-        { value: 1, easing: "easeInOutQuad", duration: 500 },
+        { to: -15, ease: "outSine", duration: 250 },
+        { to: 1, ease: "inOutQuad", duration: 500 },
       ],
       opacity: [
-        { value: 1, easing: "easeOutSine", duration: 250 },
-        { value: 0.5, easing: "easeInOutQuad", duration: 500 },
+        { to: 1, ease: "outSine", duration: 250 },
+        { to: 0.5, ease: "inOutQuad", duration: 500 },
       ],
-      delay: anime.stagger(100, {
+      delay: stagger(100, {
         grid: [GRID_WIDTH, GRID_HEIGHT],
-        from: e.target.dataset.index,
+        from: parseInt(e.target.dataset.index),
       }),
     });
   };
@@ -41,7 +40,7 @@ const DotGrid = () => {
             className="dot-point h-2 w-2 rounded-full bg-gradient-to-b from-zinc-700 to-zinc-400 opacity-50 group-hover:from-indigo-500 group-hover:to-white"
             data-index={index}
           />
-        </div>,
+        </div>
       );
       index++;
     }
