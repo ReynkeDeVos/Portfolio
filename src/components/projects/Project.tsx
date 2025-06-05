@@ -62,8 +62,8 @@ export const Project = ({ modalContent, projectLink, description, imgSrc, title,
         <div className="mt-6">
           <Reveal width="w-full">
             <div className="flex items-center gap-2 w-full">
-              <h4 className="font-bold text-lg shrink-0 max-w-[calc(100%_-_150px)]">{title}</h4>
-              <div className="w-full h-[1px] bg-zinc-600" />
+              <h4 className="font-bold text-lg shrink-0 max-w-[calc(100%-150px)]">{title}</h4>
+              <div className="w-full h-px bg-zinc-600" />
 
               <Link href={code} target="_blank" rel="nofollow" aria-label={`View the source code for ${title}`}>
                 <AiFillGithub className="text-xl text-zinc-300 hover:text-indigo-300 transition-colors" />

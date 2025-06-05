@@ -10,7 +10,7 @@ export const OutlineButton = ({ children, className, ...rest }: Props) => {
   return (
     <button
       className={twMerge(
-        `relative z-0 flex items-center gap-2 overflow-hidden rounded-md border-[1px] 
+        `relative z-0 flex items-center gap-2 overflow-hidden rounded-md border 
         border-white px-4 py-2 font-medium text-sm
         text-white transition-all duration-300
         
