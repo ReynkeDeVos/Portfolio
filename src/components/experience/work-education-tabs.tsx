@@ -18,13 +18,13 @@ export function WorkEducationTabs({ experiences, education }: WorkEducationTabsP
           <TabsList className='mb-2 w-full bg-[#0a0a0f]'>
             <TabsTrigger
               value='work'
-              className='flex-1 cursor-pointer data-[state=active]:bg-gray-700'
+              className='flex-1 cursor-pointer py-2 text-lg data-[state=active]:bg-gray-700 md:py-1.5 md:text-sm'
             >
               Work
             </TabsTrigger>
             <TabsTrigger
               value='education'
-              className='flex-1 cursor-pointer data-[state=active]:bg-gray-700'
+              className='flex-1 cursor-pointer py-2 text-lg data-[state=active]:bg-gray-700 md:py-1.5 md:text-sm'
             >
               Education
             </TabsTrigger>
