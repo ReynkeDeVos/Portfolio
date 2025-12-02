@@ -1,4 +1,5 @@
 import bielefeldLogo from '../assets/company_logos/UBielefeld.png';
+import closelinkLogo from '../assets/company_logos/closelink.jpg';
 import livLogo from '../assets/company_logos/liv.svg';
 import ukeLogo from '../assets/company_logos/uke.svg';
 import wbsLogo from '../assets/company_logos/wbs.png';
@@ -15,6 +16,18 @@ export const experiences: Experience[] = [
       'Frontend and backend curriculum development',
     ],
     logo: wbsLogo,
+  },
+  {
+    company: 'Closelink',
+    shortName: 'Closelink',
+    role: 'Front-End Web Developer Intern',
+    period: 'Nov 2024 – Dec 2024',
+    description: [
+      'Modernized UI with optimized React, TypeScript, and Formik components',
+      'Improved design consistency collaborating with developers and designer',
+      'Enhanced code readability following best practices',
+    ],
+    logo: closelinkLogo,
   },
   {
     company: 'Leibniz Institute for Virology (LIV)',

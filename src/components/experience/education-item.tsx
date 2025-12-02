@@ -9,11 +9,11 @@ export function EducationItem({ education: edu }: EducationItemProps) {
     <div className='relative flex gap-6 border-l border-gray-800 py-8 pl-12'>
       {/* Institution Logo - positioned on the vertical line */}
       {edu.logo ? (
-        <div className='absolute top-8 -left-8 flex h-12 w-12 items-center justify-center rounded-lg bg-white p-2 ring-4 ring-[#0a0a0f]'>
+        <div className='absolute top-8 -left-6 flex h-12 w-12 items-center justify-center rounded-lg bg-white p-2 ring-4 ring-[#0a0a0f]'>
           <img src={edu.logo} alt={edu.institution} className='h-full w-full object-contain' />
         </div>
       ) : (
-        <div className='absolute top-8 -left-8 flex h-12 w-12 items-center justify-center rounded-lg bg-linear-to-br from-gray-700 to-gray-900 text-xs font-bold ring-4 ring-[#0a0a0f]'>
+        <div className='absolute top-8 -left-6 flex h-12 w-12 items-center justify-center rounded-lg bg-linear-to-br from-gray-700 to-gray-900 text-xs font-bold ring-4 ring-[#0a0a0f]'>
           {edu.shortName}
         </div>
       )}

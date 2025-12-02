@@ -19,7 +19,7 @@ export function SkillsSection() {
           return (
             <div
               key={skill.name}
-              className='flex items-center gap-2 rounded-lg bg-[#12121a] px-4 py-3'
+              className='flex cursor-default select-none items-center gap-2 rounded-lg bg-[#12121a] px-4 py-3'
             >
               <Icon className={`text-2xl ${skill.color}`} />
               <span>{skill.name}</span>
