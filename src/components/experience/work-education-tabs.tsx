@@ -12,7 +12,7 @@ type WorkEducationTabsProps = {
 
 export function WorkEducationTabs({ experiences, education }: WorkEducationTabsProps) {
   return (
-    <Card className='mb-20 max-w-3xl border-gray-800 bg-[#12121a]'>
+    <Card className='mb-20 max-w-4xl border-gray-800 bg-[#12121a]'>
       <CardContent className='px-8 pt-4 pb-8 md:px-10 md:pt-0 md:pb-5'>
         <Tabs defaultValue='work'>
           <TabsList className='mb-2 w-full bg-[#0a0a0f]'>
