@@ -23,7 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-
 # usually do not add these. They are needed.
 pnpm-lock.yaml
 package-lock.json
