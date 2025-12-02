@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
     company: 'WBS Coding School',
     shortName: 'WBS',
     role: 'Instructor Web Development Frontend & Backend',
-    period: 'Present',
+    period: 'Mar 2025 – Present',
     description: [
       'Teaching modern web development technologies',
       'Frontend and backend curriculum development',
