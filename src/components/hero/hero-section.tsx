@@ -4,14 +4,14 @@ import { SocialLinks } from '../social-links/social-links';
 
 export function HeroSection() {
   return (
-    <section className='mb-20 flex flex-col gap-12 md:flex-row md:items-start md:justify-between'>
+    <section className='mb-16 flex flex-col gap-12 md:flex-row md:items-start md:justify-between'>
       <div className='flex-1'>
-        <h1 className='mb-4 font-serif text-5xl font-bold italic md:text-6xl'>hi, Renke here.</h1>
+        <h1 className='mb-4 text-5xl tracking-tight md:text-6xl'>hi, Renke here.</h1>
 
         <pre className='mb-6 rounded-lg bg-[#12121a] p-4 text-base whitespace-pre-wrap'>
-          <code className='font-mono'>
-            <span className='text-purple-400'>const</span>{' '}
-            <span className='text-blue-400'>bio</span> = [
+          <code>
+            <span className='text-purple-400'>const</span> <span className='text-blue-400'>me</span>{' '}
+            = [
             <br />
             {'  '}
             <span className='text-yellow-300'>&quot;Full-Stack Dev&quot;</span>,
