@@ -40,27 +40,27 @@ export function ProfilePhoto() {
   }, []);
 
   return (
-    <div className='shrink-0' style={{ perspective: '1000px' }}>
+    <div className='shrink-0 w-fit' style={{ perspective: '1000px' }}>
       <div
         ref={imageRef}
-        className='relative transition-transform duration-150 ease-out'
+        className='relative transition-transform duration-150 ease-out w-fit'
         style={{
           transform: `rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
           transformStyle: 'preserve-3d',
         }}
       >
         {/* Card container with subtle border */}
-        <div className='relative rounded-lg border border-gray-700/30 bg-gray-800/50 p-0.5'>
+        <div className='relative rounded-lg border border-gray-700/30 bg-gray-800/50 p-0.5 w-fit'>
           {/* Front face - the image */}
           <img
             src={profileImage}
             alt='Renke'
-            className='relative z-10 h-64 w-64 rounded-md object-cover md:h-80 md:w-80'
+            className='relative z-10 h-64 w-64 rounded-md object-cover md:h-80 md:w-80 block'
           />
 
           {/* Shine effect on front */}
           <div
-            className='pointer-events-none absolute inset-0.5 z-20 rounded-md'
+            className='hidden md:block pointer-events-none absolute inset-0.5 z-20 rounded-md'
             style={{
               background: `linear-gradient(
                 ${135 + tilt.rotateY * 5}deg,
@@ -72,7 +72,7 @@ export function ProfilePhoto() {
 
           {/* Card edge - right side */}
           <div
-            className='absolute top-0 right-0 h-full w-1 rounded-r-lg'
+            className='hidden md:block absolute top-0 right-0 h-full w-1 rounded-r-lg'
             style={{
               transform: 'translateX(100%) rotateY(90deg)',
               transformOrigin: 'left',
@@ -82,7 +82,7 @@ export function ProfilePhoto() {
 
           {/* Card edge - bottom side */}
           <div
-            className='absolute bottom-0 left-0 h-1 w-full rounded-b-lg'
+            className='hidden md:block absolute bottom-0 left-0 h-1 w-full rounded-b-lg'
             style={{
               transform: 'translateY(100%) rotateX(-90deg)',
               transformOrigin: 'top',
@@ -92,7 +92,7 @@ export function ProfilePhoto() {
 
           {/* Card edge - left side */}
           <div
-            className='absolute top-0 left-0 h-full w-1 rounded-l-lg'
+            className='hidden md:block absolute top-0 left-0 h-full w-1 rounded-l-lg'
             style={{
               transform: 'translateX(-100%) rotateY(-90deg)',
               transformOrigin: 'right',
@@ -102,7 +102,7 @@ export function ProfilePhoto() {
 
           {/* Card edge - top side */}
           <div
-            className='absolute top-0 left-0 h-1 w-full rounded-t-lg'
+            className='hidden md:block absolute top-0 left-0 h-1 w-full rounded-t-lg'
             style={{
               transform: 'translateY(-100%) rotateX(90deg)',
               transformOrigin: 'bottom',
@@ -112,7 +112,7 @@ export function ProfilePhoto() {
 
           {/* Back face */}
           <div
-            className='absolute inset-0 rounded-lg'
+            className='hidden md:block absolute inset-0 rounded-lg'
             style={{
               transform: 'translateZ(-4px)',
               background: '#1a1a2e',
@@ -122,7 +122,7 @@ export function ProfilePhoto() {
 
         {/* Dynamic shadow */}
         <div
-          className='absolute -z-10 rounded-xl bg-black/40 blur-xl'
+          className='hidden md:block absolute -z-10 rounded-xl bg-black/40 blur-xl'
           style={{
             inset: '10%',
             transform: `translateX(${tilt.rotateY * 2}px) translateY(${-tilt.rotateX * 2 + 15}px) translateZ(-50px)`,
