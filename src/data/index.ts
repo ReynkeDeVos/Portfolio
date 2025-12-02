@@ -56,11 +56,7 @@ export const education: Education[] = [
     shortName: 'WBS',
     degree: 'Full-Stack Web & App Development Bootcamp',
     period: 'Mar 2024 – Jul 2024',
-    description: [
-      'Training in web development with focus on MERN stack technologies',
-      'Capstone project: Elder Gym Bro App - Fitness tracker for nerds',
-      'PokémonBattle - Pokémon arena with Context for smooth gameplay',
-    ],
+    description: ['Training in web development with focus on MERN stack technologies'],
     logo: wbsLogo,
   },
   {

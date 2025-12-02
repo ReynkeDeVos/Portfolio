@@ -1,5 +1,4 @@
-import profileImage from '@/assets/photo/photo.avif';
-
+import { ProfilePhoto } from './profile-photo';
 import { SocialLinks } from '../social-links/social-links';
 
 export function HeroSection() {
@@ -36,16 +35,7 @@ export function HeroSection() {
         <SocialLinks variant='hero' />
       </div>
 
-      {/* Profile Image */}
-      <div className='shrink-0'>
-        <div className='relative'>
-          <img
-            src={profileImage}
-            alt='Renke'
-            className='h-64 w-64 rotate-3 rounded-lg object-cover shadow-2xl duration-300 hover:rotate-0 md:h-80 md:w-80'
-          />
-        </div>
-      </div>
+      <ProfilePhoto />
     </section>
   );
 }
