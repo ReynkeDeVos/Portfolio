@@ -1,8 +1,8 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ExternalLink, Github } from 'lucide-react';
 import type { Project } from '@/types';
+import { ExternalLink, Github } from 'lucide-react';
 
 type ProjectCardProps = {
   project: Project;
@@ -45,4 +45,3 @@ export function ProjectCard({ project }: ProjectCardProps) {
     </Card>
   );
 }
-

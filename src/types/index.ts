@@ -25,4 +25,3 @@ export type Education = {
   description?: string[];
   logo?: string;
 };
-

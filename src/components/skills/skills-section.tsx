@@ -17,7 +17,10 @@ export function SkillsSection() {
         {skills.map((skill) => {
           const Icon = skill.icon;
           return (
-            <div key={skill.name} className='flex items-center gap-2 rounded-lg bg-[#12121a] px-4 py-3'>
+            <div
+              key={skill.name}
+              className='flex items-center gap-2 rounded-lg bg-[#12121a] px-4 py-3'
+            >
               <Icon className={`text-2xl ${skill.color}`} />
               <span>{skill.name}</span>
             </div>
@@ -27,4 +30,3 @@ export function SkillsSection() {
     </section>
   );
 }
-

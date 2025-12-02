@@ -1,5 +1,6 @@
-import { ProjectCard } from './project-card';
 import type { Project } from '@/types';
+
+import { ProjectCard } from './project-card';
 
 type FeaturedProjectsProps = {
   projects: Project[];
@@ -39,4 +40,3 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
     </section>
   );
 }
-

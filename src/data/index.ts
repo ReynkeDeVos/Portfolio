@@ -2,7 +2,7 @@ import bielefeldLogo from '../assets/company_logos/UBielefeld.png';
 import livLogo from '../assets/company_logos/liv.svg';
 import ukeLogo from '../assets/company_logos/uke.svg';
 import wbsLogo from '../assets/company_logos/wbs.png';
-import type { Experience, Education, Project } from '../types';
+import type { Education, Experience, Project } from '../types';
 
 export const experiences: Experience[] = [
   {
@@ -89,4 +89,3 @@ export const projects: Project[] = [
     type: 'private',
   },
 ];
-
