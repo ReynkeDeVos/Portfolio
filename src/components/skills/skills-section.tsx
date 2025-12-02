@@ -11,15 +11,14 @@ const skills = [
 
 export function SkillsSection() {
   return (
-    <section className='mb-20'>
-      <h2 className='mb-8 text-2xl font-bold'>Skills</h2>
-      <div className='flex flex-wrap gap-4'>
+    <section className='mb-16'>
+      <div className='grid grid-cols-2 gap-3 md:flex md:flex-wrap'>
         {skills.map((skill) => {
           const Icon = skill.icon;
           return (
             <div
               key={skill.name}
-              className='flex cursor-default select-none items-center gap-2 rounded-lg bg-[#12121a] px-4 py-3'
+              className='flex cursor-default items-center gap-2 rounded-lg bg-[#12121a] px-4 py-3 select-none'
             >
               <Icon className={`text-2xl ${skill.color}`} />
               <span>{skill.name}</span>
