@@ -1,5 +1,5 @@
-import { FileDown, Github, Linkedin, Mail } from 'lucide-react';
 import { handleEmailClick } from '@/lib/email';
+import { FileDown, Github, Linkedin, Mail } from 'lucide-react';
 
 type SocialLinksProps = {
   variant?: 'hero' | 'footer';
@@ -58,14 +58,9 @@ export function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
       <a href='https://github.com/ReynkeDeVos' className='hover:text-white'>
         <Github size={iconSize} />
       </a>
-      <button
-        type='button'
-        onClick={handleEmailClick}
-        className='cursor-pointer hover:text-white'
-      >
+      <button type='button' onClick={handleEmailClick} className='cursor-pointer hover:text-white'>
         <Mail size={iconSize} />
       </button>
     </div>
   );
 }
-

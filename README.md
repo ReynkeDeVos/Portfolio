@@ -8,4 +8,3 @@ The portfolio is hosted on Netlify and can be accessed at:
 
 - **Portfolio**: [https://renke-brixel.netlify.app/](https://renke-brixel.netlify.app/)
 - **Blog**: [https://renke-brixel.netlify.app/blog](https://renke-brixel.netlify.app/blog)
-

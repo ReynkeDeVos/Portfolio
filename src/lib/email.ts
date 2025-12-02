@@ -9,4 +9,3 @@ export const handleEmailClick = (e: React.MouseEvent) => {
   e.preventDefault();
   window.location.href = `mailto:${getEmail()}`;
 };
-
