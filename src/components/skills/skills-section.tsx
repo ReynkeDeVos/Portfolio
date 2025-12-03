@@ -1,12 +1,28 @@
-import { Atom, Code2, Database, Network, Server, Sparkles } from 'lucide-react';
+import * as SimpleIcons from 'simple-icons';
+
+// Helper component to render Simple Icons SVG
+function SimpleIcon({ icon, className }: { icon: typeof SimpleIcons.siReact; className?: string }) {
+  return (
+    <svg
+      role='img'
+      viewBox='0 0 24 24'
+      className={className}
+      fill='currentColor'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <title>{icon.title}</title>
+      <path d={icon.path} />
+    </svg>
+  );
+}
 
 const skills = [
-  { name: 'React', icon: Atom, color: 'text-blue-500' },
-  { name: 'TypeScript', icon: Code2, color: 'text-blue-600' },
-  { name: 'TailwindCSS', icon: Sparkles, color: 'text-cyan-500' },
-  { name: 'Node.js', icon: Server, color: 'text-green-600' },
-  { name: 'Express.js', icon: Network, color: 'text-gray-300' },
-  { name: 'MongoDB', icon: Database, color: 'text-green-500' },
+  { name: 'React', icon: SimpleIcons.siReact },
+  { name: 'TypeScript', icon: SimpleIcons.siTypescript },
+  { name: 'TailwindCSS', icon: SimpleIcons.siTailwindcss },
+  { name: 'Node.js', icon: SimpleIcons.siNodedotjs },
+  { name: 'Express.js', icon: SimpleIcons.siExpress },
+  { name: 'MongoDB', icon: SimpleIcons.siMongodb },
 ];
 
 export function SkillsSection() {
@@ -14,13 +30,12 @@ export function SkillsSection() {
     <section className='mb-16'>
       <div className='grid grid-cols-2 gap-3 md:flex md:flex-wrap'>
         {skills.map((skill) => {
-          const Icon = skill.icon;
           return (
             <div
               key={skill.name}
               className='flex cursor-default items-center gap-2 rounded-lg bg-[#12121a] px-4 py-3 select-none'
             >
-              <Icon className={`text-2xl ${skill.color}`} />
+              <SimpleIcon icon={skill.icon} className='h-6 w-6' style={{ color: `#${skill.icon.hex}` }} />
               <span>{skill.name}</span>
             </div>
           );
