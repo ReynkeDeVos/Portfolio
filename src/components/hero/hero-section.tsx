@@ -7,30 +7,33 @@ export function HeroSection() {
       <div className='flex-1'>
         <h1 className='mb-4 text-5xl tracking-tight md:text-6xl'>hi, Renke here.</h1>
 
-        <pre className='mb-6 rounded-lg bg-[#12121a] p-4 text-base whitespace-pre-wrap'>
+        <pre className='mb-6 rounded-lg bg-surface p-4 text-base whitespace-pre-wrap'>
           <code>
-            <span className='text-purple-400'>const</span> <span className='text-blue-400'>me</span>{' '}
-            = [
+            <span className='text-purple-500 dark:text-purple-400'>const</span>{' '}
+            <span className='text-blue-600 dark:text-blue-400'>me</span> = [
             <br />
             {'  '}
-            <span className='text-yellow-300'>&quot;Full-Stack Dev&quot;</span>,
+            <span className='text-amber-600 dark:text-yellow-300'>&quot;Full-Stack Dev&quot;</span>,
             <br />
             {'  '}
-            <span className='text-yellow-300'>&quot;Instructor at WBS Coding School&quot;</span>,
+            <span className='text-amber-600 dark:text-yellow-300'>
+              &quot;Instructor at WBS Coding School&quot;
+            </span>
+            ,
             <br />
             {'  '}
-            <span className='text-yellow-300'>&quot;Ultra runner&quot;</span>,
+            <span className='text-amber-600 dark:text-yellow-300'>&quot;Ultra runner&quot;</span>,
             <br />
             {'  '}
-            <span className='text-yellow-300'>&quot;I use Arch btw&quot;</span>{' '}
+            <span className='text-amber-600 dark:text-yellow-300'>&quot;I use Arch btw&quot;</span>{' '}
             {/** biome-ignore lint/suspicious/noCommentText: <explanation> */}
-            <span className='text-gray-500'>// 20+ years</span>
+            <span className='text-muted-foreground'>// 20+ years</span>
             <br />
             ];
           </code>
         </pre>
 
-        <p className='mb-8 text-lg text-gray-400'>Germany, Hamburg</p>
+        <p className='mb-8 text-lg text-muted-foreground'>Germany, Hamburg</p>
 
         <SocialLinks variant='hero' />
       </div>

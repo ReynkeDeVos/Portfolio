@@ -49,7 +49,7 @@ export function ProfilePhoto() {
         }}
       >
         {/* Card container with subtle border */}
-        <div className='relative w-fit rounded-lg border border-gray-700/30 bg-gray-800/50 p-0.5'>
+        <div className='relative w-fit rounded-lg border border-border/30 bg-muted/50 p-0.5'>
           {/* Front face - the image */}
           <img
             src={profileImage}
