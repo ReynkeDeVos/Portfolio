@@ -33,9 +33,9 @@ export function SkillsSection() {
           return (
             <div
               key={skill.name}
-              className='flex cursor-default items-center gap-2 rounded-lg bg-surface px-4 py-3 select-none'
+              className='bg-surface flex cursor-default items-center gap-2 rounded-lg px-4 py-3 select-none'
             >
-              <span className='h-6 w-6 text-foreground'>
+              <span className='text-foreground h-6 w-6'>
                 <SimpleIcon icon={skill.icon} className='h-full w-full' />
               </span>
               <span>{skill.name}</span>

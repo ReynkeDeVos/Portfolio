@@ -10,7 +10,7 @@ import { ThemeProvider } from '@/lib/theme';
 function App() {
   return (
     <ThemeProvider>
-      <div className='min-h-screen bg-background text-foreground transition-colors duration-300'>
+      <div className='bg-background text-foreground min-h-screen transition-colors duration-300'>
         <div className='relative mx-auto max-w-6xl px-6 py-12'>
           <ThemeToggle />
           <HeroSection />

@@ -16,7 +16,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
 
       {clientProjects.length > 0 && (
         <div className='mb-8'>
-          <h3 className='mb-4 text-lg font-semibold text-muted-foreground'>Client Work</h3>
+          <h3 className='text-muted-foreground mb-4 text-lg font-semibold'>Client Work</h3>
           <div className='grid gap-6 md:grid-cols-2'>
             {clientProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
@@ -28,7 +28,7 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
       {privateProjects.length > 0 && (
         <div>
           {clientProjects.length > 0 && (
-            <h3 className='mb-4 text-lg font-semibold text-muted-foreground'>Private Projects</h3>
+            <h3 className='text-muted-foreground mb-4 text-lg font-semibold'>Private Projects</h3>
           )}
           <div className='grid gap-6 md:grid-cols-2'>
             {privateProjects.map((project) => (
