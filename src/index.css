@@ -47,6 +47,10 @@
   --radius: 0.625rem;
 }
 
+html {
+  font-size: 90%;
+}
+
 /* Silk-inspired light theme */
 .light {
   --background: oklch(0.97 0.005 80);
