@@ -7,5 +7,5 @@ export const getEmail = () => {
 
 export const handleEmailClick = (e: React.MouseEvent) => {
   e.preventDefault();
-  window.location.href = `mailto:${getEmail()}`;
+  window.open(`mailto:${getEmail()}`, '_blank');
 };

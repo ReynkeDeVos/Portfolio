@@ -11,11 +11,11 @@ export function ExperienceItem({ experience: exp }: ExperienceItemProps) {
     <div className='border-border relative flex gap-6 border-l py-8 pl-12'>
       {/* Company Logo - positioned on the vertical line */}
       {exp.logo ? (
-        <div className='ring-background absolute top-8 -left-6 flex h-12 w-12 items-center justify-center rounded-lg bg-white p-2 ring-4'>
+        <div className='absolute top-8 -left-6 flex h-12 w-12 items-center justify-center rounded-lg bg-white p-2'>
           <img src={exp.logo} alt={exp.company} className='h-full w-full object-contain' />
         </div>
       ) : (
-        <div className='bg-muted ring-background absolute top-8 -left-6 flex h-12 w-12 items-center justify-center rounded-lg text-xs font-bold ring-4'>
+        <div className='bg-muted absolute top-8 -left-6 flex h-12 w-12 items-center justify-center rounded-lg text-xs font-bold'>
           {exp.shortName}
         </div>
       )}
