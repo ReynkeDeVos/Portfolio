@@ -129,10 +129,13 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, sans-serif;
   }
-  h1, h2 {
+  h1,
+  h2 {
     font-family: 'Calistoga', cursive;
   }
-  code, pre, .font-mono {
+  code,
+  pre,
+  .font-mono {
     font-family: 'JetBrains Mono', ui-monospace, monospace;
   }
 }

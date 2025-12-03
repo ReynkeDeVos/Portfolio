@@ -12,19 +12,19 @@ type WorkEducationTabsProps = {
 
 export function WorkEducationTabs({ experiences, education }: WorkEducationTabsProps) {
   return (
-    <Card className='mb-20 max-w-4xl border-border bg-surface'>
+    <Card className='border-border bg-surface mb-20 max-w-4xl'>
       <CardContent className='px-8 pt-4 pb-8 md:px-10 md:pt-0 md:pb-5'>
         <Tabs defaultValue='work'>
-          <TabsList className='mb-2 w-full bg-background'>
+          <TabsList className='bg-background mb-2 w-full'>
             <TabsTrigger
               value='work'
-              className='flex-1 cursor-pointer py-2 text-lg data-[state=active]:bg-muted md:py-1.5 md:text-sm'
+              className='data-[state=active]:bg-muted flex-1 cursor-pointer py-2 text-lg md:py-1.5 md:text-sm'
             >
               Work
             </TabsTrigger>
             <TabsTrigger
               value='education'
-              className='flex-1 cursor-pointer py-2 text-lg data-[state=active]:bg-muted md:py-1.5 md:text-sm'
+              className='data-[state=active]:bg-muted flex-1 cursor-pointer py-2 text-lg md:py-1.5 md:text-sm'
             >
               Education
             </TabsTrigger>

@@ -8,22 +8,21 @@ export function ThemeToggle() {
     <button
       type='button'
       onClick={toggleTheme}
-      className='absolute right-6 top-0 z-50 flex h-9 w-9 items-center justify-center rounded-full bg-surface/80 text-muted-foreground backdrop-blur-sm transition-all duration-300 hover:bg-surface hover:text-foreground'
+      className='bg-surface/80 text-muted-foreground hover:bg-surface hover:text-foreground absolute top-0 right-6 z-50 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-sm transition-all duration-300'
       aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       <Sun
         size={18}
         className={`absolute transition-all duration-300 ${
-          theme === 'light' ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-0 opacity-0'
+          theme === 'light' ? 'scale-100 rotate-0 opacity-100' : 'scale-0 rotate-90 opacity-0'
         }`}
       />
       <Moon
         size={18}
         className={`absolute transition-all duration-300 ${
-          theme === 'dark' ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'
+          theme === 'dark' ? 'scale-100 rotate-0 opacity-100' : 'scale-0 -rotate-90 opacity-0'
         }`}
       />
     </button>
   );
 }
-

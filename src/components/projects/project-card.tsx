@@ -10,7 +10,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className='border-border bg-surface transition-colors hover:bg-muted'>
+    <Card className='border-border bg-surface hover:bg-muted transition-colors'>
       <CardHeader>
         <CardTitle>{project.title}</CardTitle>
         <CardDescription>{project.description}</CardDescription>
