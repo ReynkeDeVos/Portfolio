@@ -15,7 +15,7 @@ export function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
           href='/CV_Renke_Brixel.pdf'
           target='_blank'
           rel='noopener noreferrer'
-          className='flex cursor-pointer items-center gap-2 rounded-lg border border-gray-700 px-4 py-2 text-sm text-white hover:bg-[#12121a]'
+          className='flex cursor-pointer items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm text-foreground hover:bg-surface'
         >
           Resume
           <FileDown size={16} />
@@ -25,7 +25,7 @@ export function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
           target='_blank'
           rel='noopener noreferrer'
           aria-label='LinkedIn'
-          className='cursor-pointer text-gray-400 hover:text-white'
+          className='cursor-pointer text-muted-foreground hover:text-foreground'
         >
           <Linkedin size={iconSize} />
         </a>
@@ -34,7 +34,7 @@ export function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
           target='_blank'
           rel='noopener noreferrer'
           aria-label='GitHub'
-          className='cursor-pointer text-gray-400 hover:text-white'
+          className='cursor-pointer text-muted-foreground hover:text-foreground'
         >
           <Github size={iconSize} />
         </a>
@@ -42,7 +42,7 @@ export function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
           type='button'
           onClick={handleEmailClick}
           aria-label='Email'
-          className='cursor-pointer text-gray-400 hover:text-white'
+          className='cursor-pointer text-muted-foreground hover:text-foreground'
         >
           <Mail size={iconSize} />
         </button>
@@ -52,13 +52,13 @@ export function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
 
   return (
     <div className='flex justify-center gap-4'>
-      <a href='https://www.linkedin.com/in/rbrixel/' className='hover:text-white'>
+      <a href='https://www.linkedin.com/in/rbrixel/' className='hover:text-foreground'>
         <Linkedin size={iconSize} />
       </a>
-      <a href='https://github.com/ReynkeDeVos' className='hover:text-white'>
+      <a href='https://github.com/ReynkeDeVos' className='hover:text-foreground'>
         <Github size={iconSize} />
       </a>
-      <button type='button' onClick={handleEmailClick} className='cursor-pointer hover:text-white'>
+      <button type='button' onClick={handleEmailClick} className='cursor-pointer hover:text-foreground'>
         <Mail size={iconSize} />
       </button>
     </div>

@@ -3,19 +3,24 @@ import { Footer } from '@/components/footer/footer';
 import { HeroSection } from '@/components/hero/hero-section';
 import { FeaturedProjects } from '@/components/projects/featured-projects';
 import { SkillsSection } from '@/components/skills/skills-section';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { education, experiences, projects } from '@/data';
+import { ThemeProvider } from '@/lib/theme';
 
 function App() {
   return (
-    <div className='dark min-h-screen bg-[#0a0a0f] text-gray-100'>
-      <div className='mx-auto max-w-6xl px-6 py-12'>
-        <HeroSection />
-        <SkillsSection />
-        <WorkEducationTabs experiences={experiences} education={education} />
-        <FeaturedProjects projects={projects} />
-        <Footer />
+    <ThemeProvider>
+      <div className='min-h-screen bg-background text-foreground transition-colors duration-300'>
+        <div className='relative mx-auto max-w-6xl px-6 py-12'>
+          <ThemeToggle />
+          <HeroSection />
+          <SkillsSection />
+          <WorkEducationTabs experiences={experiences} education={education} />
+          <FeaturedProjects projects={projects} />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 
