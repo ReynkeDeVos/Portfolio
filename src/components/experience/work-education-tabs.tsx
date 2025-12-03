@@ -32,16 +32,24 @@ export function WorkEducationTabs({ experiences, education }: WorkEducationTabsP
 
           <TabsContent value='work'>
             <div className='ml-4 space-y-0'>
-              {experiences.map((exp) => (
-                <ExperienceItem key={exp.company} experience={exp} />
+              {experiences.map((exp, index) => (
+                <ExperienceItem
+                  key={exp.company}
+                  experience={exp}
+                  isLast={index === experiences.length - 1}
+                />
               ))}
             </div>
           </TabsContent>
 
           <TabsContent value='education'>
             <div className='ml-4 space-y-0'>
-              {education.map((edu) => (
-                <EducationItem key={edu.institution} education={edu} />
+              {education.map((edu, index) => (
+                <EducationItem
+                  key={edu.institution}
+                  education={edu}
+                  isLast={index === education.length - 1}
+                />
               ))}
             </div>
           </TabsContent>

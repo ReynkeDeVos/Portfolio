@@ -1,6 +1,7 @@
 import bielefeldLogo from '../assets/company_logos/UBielefeld.avif';
 import closelinkLogo from '../assets/company_logos/closelink.avif';
 import livLogo from '../assets/company_logos/liv.svg';
+import slsLogo from '../assets/company_logos/SLS.svg';
 import ukeLogo from '../assets/company_logos/uke.svg';
 import wbsLogo from '../assets/company_logos/wbs.avif';
 import type { Education, Experience, Project } from '../types';
@@ -16,6 +17,7 @@ export const experiences: Experience[] = [
       'Frontend and backend curriculum development',
     ],
     logo: wbsLogo,
+    websiteUrl: 'https://www.wbscodingschool.com/',
   },
   {
     company: 'Closelink',
@@ -27,6 +29,7 @@ export const experiences: Experience[] = [
       'Improved design consistency collaborating with developers and designer',
     ],
     logo: closelinkLogo,
+    websiteUrl: 'https://www.closelink.com/',
   },
   {
     company: 'Leibniz Institute for Virology (LIV)',
@@ -38,6 +41,7 @@ export const experiences: Experience[] = [
       'Collaboration in multidisciplinary teams and lab management',
     ],
     logo: livLogo,
+    websiteUrl: 'https://www.leibniz-liv.de/en/research/research-units/virus-host-interaction',
   },
   {
     company: 'University Medical Center Hamburg-Eppendorf (UKE)',
@@ -46,6 +50,7 @@ export const experiences: Experience[] = [
     period: 'Aug 2012 – Mar 2014',
     description: ['Sample analysis and database maintenance', 'Supervision of interns'],
     logo: ukeLogo,
+    websiteUrl: 'https://www.uke.de/kliniken-institute/institute/institut-f%C3%BCr-tumorbiologie/index.html',
   },
 ];
 
@@ -60,6 +65,7 @@ export const education: Education[] = [
       'Hands-on projects building full-stack applications',
     ],
     logo: wbsLogo,
+    websiteUrl: 'https://www.wbscodingschool.com/',
   },
   {
     institution: 'School of Life Science Hamburg GmbH',
@@ -70,7 +76,8 @@ export const education: Education[] = [
       'Comprehensive training in biological and technical methods and analysis',
       'Second best in the training program (GPA: 1.6)',
     ],
-    logo: ukeLogo,
+    logo: slsLogo,
+    websiteUrl: 'https://www.uke.de/organisationsstruktur/tochtergesellschaften/school-of-life-science/index.html',
   },
   {
     institution: 'Bielefeld University',
@@ -79,6 +86,7 @@ export const education: Education[] = [
     period: 'Oct 2005 – Feb 2010',
     description: ['Studies without degree', 'Knowledge in Java and Haskell'],
     logo: bielefeldLogo,
+    websiteUrl: 'https://ekvv.uni-bielefeld.de/sinfo/publ/bachelor/bioinformatik;jsessionid=DEC48FB00A23BC8E59B48932E0DFCAE8',
   },
 ];
 
