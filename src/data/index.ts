@@ -1,8 +1,8 @@
-import bielefeldLogo from '../assets/company_logos/UBielefeld.png';
-import closelinkLogo from '../assets/company_logos/closelink.jpg';
+import bielefeldLogo from '../assets/company_logos/UBielefeld.avif';
+import closelinkLogo from '../assets/company_logos/closelink.avif';
 import livLogo from '../assets/company_logos/liv.svg';
 import ukeLogo from '../assets/company_logos/uke.svg';
-import wbsLogo from '../assets/company_logos/wbs.png';
+import wbsLogo from '../assets/company_logos/wbs.avif';
 import type { Education, Experience, Project } from '../types';
 
 export const experiences: Experience[] = [
