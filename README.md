@@ -1,4 +1,4 @@
-# Renke Brixel's Portfolio
+# Renke's Portfolio
 
 Welcome to my portfolio repository! This project showcases my skills and projects as a web and app developer.
 
