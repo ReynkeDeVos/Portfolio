@@ -35,7 +35,9 @@ export function SkillsSection() {
               key={skill.name}
               className='flex cursor-default items-center gap-2 rounded-lg bg-[#12121a] px-4 py-3 select-none'
             >
-              <SimpleIcon icon={skill.icon} className='h-6 w-6' style={{ color: `#${skill.icon.hex}` }} />
+              <span style={{ color: 'white' }} className='h-6 w-6'>
+                <SimpleIcon icon={skill.icon} className='h-full w-full' />
+              </span>
               <span>{skill.name}</span>
             </div>
           );

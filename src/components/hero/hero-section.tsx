@@ -1,5 +1,5 @@
-import { ProfilePhoto } from './profile-photo';
 import { SocialLinks } from '../social-links/social-links';
+import { ProfilePhoto } from './profile-photo';
 
 export function HeroSection() {
   return (
