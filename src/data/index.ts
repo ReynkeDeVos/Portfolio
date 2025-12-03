@@ -25,7 +25,6 @@ export const experiences: Experience[] = [
     description: [
       'Modernized UI with optimized React, TypeScript, and Formik components',
       'Improved design consistency collaborating with developers and designer',
-      'Enhanced code readability following best practices',
     ],
     logo: closelinkLogo,
   },
@@ -56,7 +55,10 @@ export const education: Education[] = [
     shortName: 'WBS',
     degree: 'Full-Stack Web & App Development Bootcamp',
     period: 'Mar 2024 – Jul 2024',
-    description: ['Training in web development with focus on MERN stack technologies'],
+    description: [
+      'Training in web development with focus on MERN stack technologies',
+      'Hands-on projects building full-stack applications',
+    ],
     logo: wbsLogo,
   },
   {
