@@ -1,7 +1,9 @@
+import { memo } from 'react';
+
 import { SocialLinks } from '../social-links/social-links';
 import { ProfilePhoto } from './profile-photo';
 
-export function HeroSection() {
+export const HeroSection = memo(function HeroSection() {
   return (
     <section className='mb-16 flex flex-col gap-12 md:flex-row md:items-start md:justify-between'>
       <div className='flex-1'>
@@ -45,4 +47,4 @@ export function HeroSection() {
       <ProfilePhoto />
     </section>
   );
-}
+});

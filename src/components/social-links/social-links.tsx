@@ -1,11 +1,12 @@
 import { handleEmailClick } from '@/lib/email';
 import { FileDown, Github, Linkedin, Mail } from 'lucide-react';
+import { memo } from 'react';
 
 type SocialLinksProps = {
   variant?: 'hero' | 'footer';
 };
 
-export function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
+export const SocialLinks = memo(function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
   const iconSize = variant === 'hero' ? 20 : 18;
 
   if (variant === 'hero') {
@@ -67,4 +68,4 @@ export function SocialLinks({ variant = 'hero' }: SocialLinksProps) {
       </button>
     </div>
   );
-}
+});
