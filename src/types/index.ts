@@ -15,6 +15,7 @@ export type Experience = {
   description: string[];
   link?: { label: string; url: string };
   logo?: string;
+  websiteUrl?: string;
 };
 
 export type Education = {
@@ -24,4 +25,5 @@ export type Education = {
   period: string;
   description?: string[];
   logo?: string;
+  websiteUrl?: string;
 };
