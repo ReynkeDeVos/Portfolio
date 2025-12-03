@@ -1,9 +1,13 @@
+import profileImageFull from '@/assets/photo/photo-original.avif';
 import profileImage from '@/assets/photo/photo.avif';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { useEffect, useRef, useState } from 'react';
 
 export function ProfilePhoto() {
   const imageRef = useRef<HTMLDivElement>(null);
+  const preloadedImageRef = useRef<HTMLImageElement | null>(null);
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -38,6 +42,25 @@ export function ProfilePhoto() {
     };
   }, []);
 
+  // Preload full-resolution image after page has loaded
+  useEffect(() => {
+    // Use requestIdleCallback to preload when browser is idle, with fallback
+    const preloadImage = () => {
+      // Store in ref to prevent garbage collection
+      preloadedImageRef.current = new Image();
+      preloadedImageRef.current.src = profileImageFull;
+    };
+
+    if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(preloadImage, { timeout: 3000 });
+      return () => cancelIdleCallback(idleId);
+    } else {
+      // Fallback: preload after a short delay
+      const timeoutId = setTimeout(preloadImage, 2000);
+      return () => clearTimeout(timeoutId);
+    }
+  }, []);
+
   return (
     <div className='w-fit shrink-0' style={{ perspective: '1000px' }}>
       <div
@@ -51,11 +74,18 @@ export function ProfilePhoto() {
         {/* Card container with subtle border */}
         <div className='border-border/30 bg-muted/50 relative w-fit rounded-lg border p-0.5'>
           {/* Front face - the image */}
-          <img
-            src={profileImage}
-            alt='Renke'
-            className='relative z-10 block h-64 w-64 rounded-md object-cover md:h-80 md:w-80'
-          />
+          <button
+            type='button'
+            className='relative z-10 block cursor-pointer rounded-md border-none bg-transparent p-0'
+            onClick={() => setIsLightboxOpen(true)}
+            aria-label='View full size photo'
+          >
+            <img
+              src={profileImage}
+              alt='Renke'
+              className='block h-64 w-64 rounded-md object-cover md:h-80 md:w-80'
+            />
+          </button>
 
           {/* Shine effect on front */}
           <div
@@ -128,6 +158,22 @@ export function ProfilePhoto() {
           }}
         />
       </div>
+
+      {/* Image lightbox modal */}
+      <Dialog open={isLightboxOpen} onOpenChange={setIsLightboxOpen}>
+        <DialogContent
+          className='max-w-[90vw] border-none bg-transparent p-0 shadow-none sm:max-w-fit [&>button]:text-white/70 [&>button]:hover:text-white'
+          overlayClassName='bg-black/90 backdrop-blur-sm'
+          showCloseButton
+        >
+          <DialogTitle className='sr-only'>Profile photo of Renke</DialogTitle>
+          <img
+            src={profileImageFull}
+            alt='Renke - Full resolution'
+            className='max-h-[85vh] max-w-[90vw] rounded-lg object-contain shadow-2xl'
+          />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
