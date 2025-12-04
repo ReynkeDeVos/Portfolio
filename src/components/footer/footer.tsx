@@ -7,6 +7,7 @@ export function Footer() {
         <SocialLinks variant='footer' />
         <p>© {new Date().getFullYear()} Renke Brixel</p>
       </div>
+      <p className='mt-4 text-center'>Built during a productive procrastination session.</p>
     </footer>
   );
 }

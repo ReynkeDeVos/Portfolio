@@ -28,6 +28,18 @@ export const HeroSection = memo(function HeroSection() {
             <span className='text-amber-600 dark:text-yellow-300'>&quot;Ultra runner&quot;</span>
             ,
             <br />
+            {/* <br />
+            {'  '}
+            <span className='text-amber-600 dark:text-yellow-300'>
+              &quot;I exit Nvim on the first try&quot;
+            </span>
+            , */}
+            {'  '}
+            <span className='text-amber-600 dark:text-yellow-300'>
+              &quot;I solve problems that shouldn't exist.&quot;
+            </span>
+            ,
+            <br />
             {'  '}
             <span className='text-amber-600 dark:text-yellow-300'>
               &quot;I use Arch btw&quot;
