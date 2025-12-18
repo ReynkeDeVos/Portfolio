@@ -114,7 +114,7 @@ export const projects: Project[] = [
     title: 'Elder Gym Bro App',
     description:
       'Fitness tracker for nerds. Implementation of user authentication, workout plan management, and progress tracking. Integration of APIs for external fitness data, user-friendly UI/UX design.',
-    tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'Mongoose', 'JWT'],
     source: 'https://github.com/ReynkeDeVos',
     type: 'private',
   },
