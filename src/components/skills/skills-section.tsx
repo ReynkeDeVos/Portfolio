@@ -19,10 +19,10 @@ function SimpleIcon({ icon, className }: { icon: typeof SimpleIcons.siReact; cla
 const skills = [
   { name: 'React', icon: SimpleIcons.siReact },
   { name: 'TypeScript', icon: SimpleIcons.siTypescript },
-  { name: 'TailwindCSS', icon: SimpleIcons.siTailwindcss },
+  { name: 'Tailwind CSS', icon: SimpleIcons.siTailwindcss },
   { name: 'Node.js', icon: SimpleIcons.siNodedotjs },
   { name: 'Express.js', icon: SimpleIcons.siExpress },
-  { name: 'MongoDB', icon: SimpleIcons.siMongodb },
+  { name: 'Mongoose', icon: SimpleIcons.siMongoose },
 ];
 
 export function SkillsSection() {
@@ -30,12 +30,13 @@ export function SkillsSection() {
     <section className='mb-16'>
       <div className='grid grid-cols-2 gap-3 md:flex md:flex-wrap'>
         {skills.map((skill) => {
+          const isMongoose = skill.name === 'Mongoose';
           return (
             <div
               key={skill.name}
               className='bg-surface flex cursor-default items-center gap-2 rounded-lg px-4 py-3 select-none'
             >
-              <span className='text-foreground h-6 w-6'>
+              <span className={`text-foreground h-6 w-6 ${isMongoose ? 'scale-125' : ''}`}>
                 <SimpleIcon icon={skill.icon} className='h-full w-full' />
               </span>
               <span>{skill.name}</span>
